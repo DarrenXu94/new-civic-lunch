@@ -1,0 +1,15 @@
+---
+interface Props {
+  title: string;
+  id: string;
+}
+
+const { title, id } = Astro.props;
+---
+
+<div>
+  <a href={'/review/'+id}>
+
+  {title}
+  </a>
+</div>

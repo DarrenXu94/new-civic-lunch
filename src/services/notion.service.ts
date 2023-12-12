@@ -5,8 +5,22 @@ const LOCAL_URL = "http://localhost:9999";
 
 const FUNCTION_LINK = "/.netlify/functions/notion";
 
-export const getData = async () => {
+export const getData = async (id?: string, type?: string) => {
   const isLocalHost = process.env.NODE_ENV === "development";
 
-  return axios.get(`${isLocalHost ? LOCAL_URL : BASE_URL}${FUNCTION_LINK}`);
+  const url = new URL(`${isLocalHost ? LOCAL_URL : BASE_URL}${FUNCTION_LINK}`);
+
+  if (id) {
+    url.searchParams.set("id", id);
+  }
+
+  if (type) {
+    url.searchParams.set("type", type);
+  }
+
+  // console.log({ id });
+
+  return axios.get(url.toString());
 };
+
+export const getReview = async (id) => {};

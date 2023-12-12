@@ -1,0 +1,33 @@
+---
+import { getData } from "../../services/notion.service";
+
+const { slug } = Astro.params;
+
+const pageData = await getData(slug, "page");
+const res = await getData(slug);
+
+// console.log(res.data.response);
+
+const title = pageData.data.response.properties.title.title[0].plain_text;
+---
+
+<script define:vars={{ res: pageData.data.response }}>
+  console.log({ res });
+  console.log(res.properties.title.title[0].plain_text);
+</script>
+
+<div>
+  <h1>
+    {title}
+  </h1>
+  <!-- {res.properties.title.title[0].plain_text} -->
+  {
+    res.data.response.results.map((result) =>
+      result.paragraph.rich_text.length ? (
+        <div>{result.paragraph.rich_text[0].plain_text}</div>
+      ) : (
+        ""
+      )
+    )
+  }
+</div>
