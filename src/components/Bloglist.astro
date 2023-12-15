@@ -3,7 +3,6 @@ import FormattedDate from "./FormattedDate.astro";
 
 import { getData } from "../services/notion.service";
 const res = await getData();
-import data from "../mocks/notion";
 ---
 
 <style>
@@ -78,7 +77,7 @@ import data from "../mocks/notion";
 <section>
   <ul>
     {
-      data.results.map((result) => (
+      res.data.response.results.map((result) => (
         <li>
           <a href={"/review/" + result.id}>
             <h4 class="title">{result.child_page.title}</h4>
