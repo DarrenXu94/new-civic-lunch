@@ -8,9 +8,6 @@ import FormattedDate from "../components/FormattedDate.astro";
 import data from "../mocks/notion";
 import { getData } from "../services/notion.service";
 const res = await getData();
-// console.log(data);
-
-import Card from "../components/Reviews/Card.astro";
 ---
 
 <script define:vars={{ res: data }}>
