@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "https://vermillion-custard-f525f4.netlify.app";
+const BASE_URL = "";
 const LOCAL_URL = "http://localhost:9999";
 
 const FUNCTION_LINK = "/.netlify/functions/notion";
@@ -17,8 +17,6 @@ export const getData = async (id?: string, type?: string) => {
   if (type) {
     url.searchParams.set("type", type);
   }
-
-  // console.log({ id });
 
   return axios.get(url.toString());
 };
