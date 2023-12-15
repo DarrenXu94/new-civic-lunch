@@ -7,9 +7,11 @@ interface Props {
 const { title, id } = Astro.props;
 ---
 
-<div>
-  <a href={'/review/'+id}>
-
-  {title}
+<li>
+  <a href={"/review/" + id}>
+    <h4 class="title">
+      {title}
+    </h4>
+    <p class="date">Test</p>
   </a>
-</div>
+</li>

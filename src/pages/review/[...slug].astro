@@ -1,5 +1,6 @@
 ---
 import { getData } from "../../services/notion.service";
+import Recipie from "../../layouts/Recipie.astro";
 
 const { slug } = Astro.params;
 
@@ -9,6 +10,11 @@ const res = await getData(slug);
 // console.log(res.data.response);
 
 const title = pageData.data.response.properties.title.title[0].plain_text;
+
+const pubDate = new Date(pageData.data.response.created_time);
+const updatedDate = new Date(pageData.data.response.last_edited_time);
+
+const heroImage = pageData.data.response.cover.external.url;
 ---
 
 <script define:vars={{ res: pageData.data.response }}>
@@ -16,18 +22,22 @@ const title = pageData.data.response.properties.title.title[0].plain_text;
   console.log(res.properties.title.title[0].plain_text);
 </script>
 
-<div>
-  <h1>
-    {title}
-  </h1>
-  <!-- {res.properties.title.title[0].plain_text} -->
-  {
-    res.data.response.results.map((result) =>
-      result.paragraph.rich_text.length ? (
-        <div>{result.paragraph.rich_text[0].plain_text}</div>
-      ) : (
-        ""
+<Recipie
+  title={title}
+  pubDate={pubDate}
+  updatedDate={updatedDate}
+  heroImage={heroImage}
+>
+  <div>
+    <!-- {res.properties.title.title[0].plain_text} -->
+    {
+      res.data.response.results.map((result) =>
+        result.paragraph.rich_text.length ? (
+          <div>{result.paragraph.rich_text[0].plain_text}</div>
+        ) : (
+          ""
+        )
       )
-    )
-  }
-</div>
+    }
+  </div>
+</Recipie>
