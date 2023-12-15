@@ -1,5 +1,5 @@
 import axios from "axios";
-
+console.log(process.env);
 const BASE_URL = process.env.DEPLOY_URL;
 const LOCAL_URL = "http://localhost:9999";
 
