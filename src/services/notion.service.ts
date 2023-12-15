@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "https://CHANGE.netlify.app";
+const BASE_URL = "https://vermillion-custard-f525f4.netlify.app";
 const LOCAL_URL = "http://localhost:9999";
 
 const FUNCTION_LINK = "/.netlify/functions/notion";

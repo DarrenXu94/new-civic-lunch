@@ -21,3 +21,5 @@ Connect to integration
 Page and block content different
 
 Page has title, block doesnt
+
+make sure name matches on netlify for sitexml
