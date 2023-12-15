@@ -3,16 +3,7 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-import FormattedDate from "../components/FormattedDate.astro";
-
-import data from "../mocks/notion";
-import { getData } from "../services/notion.service";
-const res = await getData();
 ---
-
-<script define:vars={{ res: data }}>
-  console.log({ res });
-</script>
 
 <html lang="en">
   <head>
@@ -90,7 +81,8 @@ const res = await getData();
   <body>
     <Header title={SITE_TITLE} />
     <main>
-      <section>
+      test
+      <!-- <section>
         <ul>
           {
             data.results.map((result) => (
@@ -105,7 +97,7 @@ const res = await getData();
             ))
           }
         </ul>
-      </section>
+      </section> -->
     </main>
     <Footer />
   </body>

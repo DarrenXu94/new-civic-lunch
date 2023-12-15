@@ -6,7 +6,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://example.com",
+  site: "https://main--vermillion-custard-f525f4.netlify.app/",
   output: "server",
   adapter: netlify(),
 

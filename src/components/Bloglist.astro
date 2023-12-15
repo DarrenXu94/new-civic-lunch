@@ -1,0 +1,24 @@
+---
+import FormattedDate from "./FormattedDate.astro";
+
+import { getData } from "../services/notion.service";
+const res = await getData();
+import data from "../mocks/notion";
+---
+
+<section>
+  <ul>
+    {
+      data.results.map((result) => (
+        <li>
+          <a href={"/review/" + result.id}>
+            <h4 class="title">{result.child_page.title}</h4>
+            <p class="date">
+              <FormattedDate date={new Date(result.created_time)} />
+            </p>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</section>
