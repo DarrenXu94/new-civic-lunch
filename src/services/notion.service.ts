@@ -1,6 +1,5 @@
 import axios from "axios";
-console.log(process.env);
-const BASE_URL = process.env.DEPLOY_URL;
+const BASE_URL = process.env.URL;
 const LOCAL_URL = "http://localhost:9999";
 
 const FUNCTION_LINK = "/.netlify/functions/notion";
