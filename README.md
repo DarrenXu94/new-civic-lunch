@@ -17,3 +17,7 @@ Add netlify function
 Add env
 https://developers.notion.com/docs/create-a-notion-integration
 Connect to integration
+
+Page and block content different
+
+Page has title, block doesnt
