@@ -1,0 +1,16 @@
+---
+import Rating from "./Rating.astro";
+const { data } = Astro.props;
+---
+
+<div>
+  {
+    data.paragraph.rich_text[0].plain_text.startsWith("Rating:") ? (
+      <Rating
+        rating={data.paragraph.rich_text[0].plain_text.split("Rating:")[1]}
+      />
+    ) : (
+      data.paragraph.rich_text[0].plain_text
+    )
+  }
+</div>

@@ -1,0 +1,41 @@
+---
+import { Image } from "astro:assets";
+import aTier from "../assets/images/ratings/a-tier.png";
+import bTier from "../assets/images/ratings/b-tier.png";
+import cTier from "../assets/images/ratings/c-tier.png";
+import fTier from "../assets/images/ratings/f-tier.png";
+import sTier from "../assets/images/ratings/s-tier.png";
+
+const { rating } = Astro.props;
+
+// let image;
+
+const getImage = () => {
+  switch (rating.trim()) {
+    case "A": {
+      return aTier;
+    }
+    case "B": {
+      return bTier;
+    }
+    case "C": {
+      return cTier;
+    }
+    case "F": {
+      return fTier;
+    }
+    case "S": {
+      return sTier;
+    }
+    default: {
+      return null;
+    }
+  }
+};
+
+const res = getImage();
+---
+
+<div>
+  {res && <Image width={100} src={res} alt={`${rating.trim()} tier`} />}
+</div>

@@ -1,6 +1,7 @@
 ---
 import { getData } from "../../services/notion.service";
-import Recipie from "../../layouts/Recipie.astro";
+import Review from "../../layouts/Review.astro";
+import ReviewContent from "../../components/ReviewContent.astro";
 
 const { slug } = Astro.params;
 
@@ -17,12 +18,15 @@ const updatedDate = new Date(pageData.data.response.last_edited_time);
 const heroImage = pageData.data.response.cover.external.url;
 ---
 
-<script define:vars={{ res: pageData.data.response }}>
+<script
+  define:vars={{ res: pageData.data.response, resData: res.data.response }}
+>
   console.log({ res });
+  console.log({ resData });
   console.log(res.properties.title.title[0].plain_text);
 </script>
 
-<Recipie
+<Review
   title={title}
   pubDate={pubDate}
   updatedDate={updatedDate}
@@ -33,11 +37,12 @@ const heroImage = pageData.data.response.cover.external.url;
     {
       res.data.response.results.map((result) =>
         result.paragraph.rich_text.length ? (
-          <div>{result.paragraph.rich_text[0].plain_text}</div>
+          // <div>{result.paragraph.rich_text[0].plain_text}</div>
+          <ReviewContent data={result} />
         ) : (
           ""
         )
       )
     }
   </div>
-</Recipie>
+</Review>
