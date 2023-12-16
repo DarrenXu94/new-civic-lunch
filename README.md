@@ -23,3 +23,6 @@ Page and block content different
 Page has title, block doesnt
 
 make sure name matches on netlify for sitexml
+process.env.URL
+
+if using js to fetch cant do client side for function app

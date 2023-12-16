@@ -6,7 +6,10 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: process.env.URL,
+  site:
+    process.env.NODE_ENV === "development"
+      ? "http://example.com"
+      : process.env.URL,
   output: "server",
   adapter: netlify(),
 
