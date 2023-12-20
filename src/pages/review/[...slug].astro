@@ -15,7 +15,7 @@ const title = pageData.data.response.properties.title.title[0].plain_text;
 const pubDate = new Date(pageData.data.response.created_time);
 const updatedDate = new Date(pageData.data.response.last_edited_time);
 
-const heroImage = pageData.data.response.cover.external.url;
+const heroImage = pageData.data.response?.cover?.external?.url;
 ---
 
 <script
