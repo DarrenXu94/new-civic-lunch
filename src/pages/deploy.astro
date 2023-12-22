@@ -1,0 +1,17 @@
+---
+
+---
+
+<script>
+  import axios from "axios";
+
+  const tgt = document.querySelector("#deploy");
+  tgt.addEventListener("click", () => {
+    axios.post(
+      "https://api.netlify.com/build_hooks/65861661b2a7d726d34e8c0a",
+      {}
+    );
+  });
+</script>
+
+<button id="deploy"> Deploy</button>

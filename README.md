@@ -6,6 +6,8 @@ TODO:
 - Notion API
 - Put functions and code into 1 repo
 - Local interceptor?
+- Make a github action to redeploy? Build hook
+- add secret deploy page
 
 
 notionHQ
