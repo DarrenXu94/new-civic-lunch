@@ -16,10 +16,21 @@ const pubDate = new Date(pageData.data.response.created_time);
 const updatedDate = new Date(pageData.data.response.last_edited_time);
 
 const heroImage = pageData.data.response?.cover?.external?.url;
+
+export async function getStaticPaths() {
+  const allPaths = await getData();
+
+  return allPaths.data.response.results.map((review) => ({
+    params: { slug: review.id },
+  }));
+}
 ---
 
 <script
-  define:vars={{ res: pageData.data.response, resData: res.data.response }}
+  define:vars={{
+    res: pageData.data.response,
+    resData: res.data.response,
+  }}
 >
   console.log({ res });
   console.log({ resData });

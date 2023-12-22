@@ -10,8 +10,8 @@ export default defineConfig({
     process.env.NODE_ENV === "development"
       ? "http://example.com"
       : process.env.URL,
-  output: "server",
-  adapter: netlify(),
+  output: "static",
+  // adapter: netlify(),
 
   integrations: [mdx(), sitemap()],
 });
