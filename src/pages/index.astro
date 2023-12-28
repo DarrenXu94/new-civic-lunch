@@ -6,6 +6,16 @@ import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
+<script>
+  import JSConfetti from "js-confetti";
+  const jsConfetti = new JSConfetti();
+
+  jsConfetti.addConfetti({
+    emojis: ["🍔", "🌯", "🍦", "🍡", "🍱", "🍙", "🍰", "🍟", "🍗", "🍕"],
+    emojiSize: 40,
+  });
+</script>
+
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />

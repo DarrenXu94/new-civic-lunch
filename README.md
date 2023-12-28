@@ -1,30 +1,16 @@
 ## New civic lunch
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/65ef2c4b-c808-440f-85be-1f014c72b339/deploy-status)](https://app.netlify.com/sites/vermillion-custard-f525f4/deploys)
+
+
+
 TODO:
-- Netlify functions to read from notion
-- Deploy on Netlify
-- Notion API
-- Put functions and code into 1 repo
 - Local interceptor?
-- Make a github action to redeploy? Build hook
-- add secret deploy page
 
+[View live](https://lunch.darrenxu.com/)
 
-notionHQ
+## Features
 
-How to test API locally
-https://www.notion.so/my-integrations
-
-Add netlify function
-Add env
-https://developers.notion.com/docs/create-a-notion-integration
-Connect to integration
-
-Page and block content different
-
-Page has title, block doesnt
-
-make sure name matches on netlify for sitexml
-process.env.URL
-
-if using js to fetch cant do client side for function app
+Built with Astro statically. 
+Netlify function to call Notion API.
+Deployed on Netlify.
