@@ -1,4 +1,9 @@
-import axios from "axios";
+import Axios from "axios";
+import { setupCache } from "axios-cache-interceptor";
+
+const instance = Axios.create();
+const axios = setupCache(instance);
+
 const BASE_URL = process.env.URL;
 const LOCAL_URL = "http://localhost:9999";
 

@@ -5,10 +5,24 @@ import { getData } from "../services/notion.service";
 const res = await getData();
 
 const log = res.data.response;
+
+const pageResults = [] as any[];
+
+if (log.results) {
+  for (const result of log.results) {
+    // console.log(result);
+    const instance = await getData((result as any).id, "page");
+
+    const item = { ...instance.data.response, title: result.child_page.title };
+
+    pageResults.push(item);
+  }
+}
 ---
 
-<script define:vars={{ log }}>
+<script define:vars={{ log, pageResults }}>
   console.log({ log });
+  console.log({ pageResults });
 </script>
 
 <style>
@@ -30,7 +44,7 @@ const log = res.data.response;
     text-decoration: none;
     transition: 0.2s ease;
   }
-  /* ul li:first-child {
+  ul li:first-child {
     width: 100%;
     margin-bottom: 1rem;
     text-align: center;
@@ -40,10 +54,11 @@ const log = res.data.response;
   }
   ul li:first-child .title {
     font-size: 2.369rem;
-  } */
+  }
   ul li img {
     margin-bottom: 0.5rem;
     border-radius: 12px;
+    object-fit: cover;
   }
   ul li a {
     display: block;
@@ -83,10 +98,17 @@ const log = res.data.response;
 <section>
   <ul>
     {
-      res.data.response.results.map((result) => (
+      pageResults.map((result) => (
         <li>
           <a href={"/review/" + result.id}>
-            <h4 class="title">{result.child_page.title}</h4>
+            <img
+              width={720}
+              height={180}
+              src={result.cover.external?.url}
+              alt=""
+            />
+
+            <h4 class="title">{result.title}</h4>
             <p class="date">
               <FormattedDate date={new Date(result.created_time)} />
             </p>
