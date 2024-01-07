@@ -47,7 +47,7 @@ export async function getStaticPaths() {
     <!-- {res.properties.title.title[0].plain_text} -->
     {
       res.data.response.results.map((result) =>
-        result.paragraph.rich_text.length ? (
+        result.paragraph && result.paragraph.rich_text.length ? (
           // <div>{result.paragraph.rich_text[0].plain_text}</div>
           <ReviewContent data={result} />
         ) : (
