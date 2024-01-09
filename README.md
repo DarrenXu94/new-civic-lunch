@@ -7,6 +7,10 @@
 TODO:
 - Local interceptor?
 
+Limitations:
+- Can't do much client side JS without framework (eg want to add pagination)
+- No stores
+
 [View live](https://lunch.darrenxu.com/)
 
 ## Features

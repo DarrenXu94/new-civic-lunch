@@ -1,5 +1,6 @@
 ---
 import FormattedDate from "./FormattedDate.astro";
+import { Image } from "astro:assets";
 
 import { getData } from "../services/notion.service";
 const res = await getData();
@@ -101,14 +102,20 @@ if (log.results) {
       pageResults.map((result) => (
         <li>
           <a href={"/review/" + result.id}>
-            <img
-              width={720}
-              height={180}
-              src={result.cover.external?.url}
-              alt=""
-            />
+            {result.cover && (
+              <Image
+                quality="mid"
+                width={720}
+                height={180}
+                src={result.cover.external?.url || result.cover.file.url}
+                alt=""
+              />
+            )}
 
-            <h4 class="title">{result.title}</h4>
+            <h4 class="title">
+              {result.icon && result.icon.emoji}
+              {result.title}
+            </h4>
             <p class="date">
               <FormattedDate date={new Date(result.created_time)} />
             </p>
