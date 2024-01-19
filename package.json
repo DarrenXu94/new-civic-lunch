@@ -8,7 +8,8 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "middleware": "netlify functions:serve"
+    "middleware": "netlify functions:serve",
+    "fetch-data": "cd scripts && node fetchData.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.3.1",

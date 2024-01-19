@@ -1,8 +1,14 @@
 ---
 import { Image } from "astro:assets";
 import aTier from "../assets/images/ratings/a-tier.png";
+import aPlusTier from "../assets/images/ratings/a-plus-tier.png";
+import aMinusTier from "../assets/images/ratings/a-minus-tier.png";
 import bTier from "../assets/images/ratings/b-tier.png";
+import bPlusTier from "../assets/images/ratings/b-plus-tier.png";
+import bMinusTier from "../assets/images/ratings/b-minus-tier.png";
 import cTier from "../assets/images/ratings/c-tier.png";
+import cPlusTier from "../assets/images/ratings/c-plus-tier.png";
+import cMinusTier from "../assets/images/ratings/c-minus-tier.png";
 import fTier from "../assets/images/ratings/f-tier.png";
 import sTier from "../assets/images/ratings/s-tier.png";
 
@@ -15,11 +21,29 @@ const getImage = () => {
     case "A": {
       return aTier;
     }
+    case "A+": {
+      return aPlusTier;
+    }
+    case "A-": {
+      return aMinusTier;
+    }
     case "B": {
       return bTier;
     }
+    case "B-": {
+      return bMinusTier;
+    }
+    case "B+": {
+      return bPlusTier;
+    }
     case "C": {
       return cTier;
+    }
+    case "C+": {
+      return cPlusTier;
+    }
+    case "C-": {
+      return cMinusTier;
     }
     case "F": {
       return fTier;
