@@ -2,6 +2,15 @@
 import axios from "axios";
 import fs from "fs";
 
+const createMarkdown = (title, pubDate, content) => `---
+title: '${title}'
+pubDate: '${pubDate}'
+heroImage: '/assets/covers/${title.replaceAll(" ", "_")}.jpeg'
+---
+
+${content}
+`;
+
 const BASE_URL = process.env.URL;
 const LOCAL_URL = "http://localhost:9999";
 
@@ -74,11 +83,28 @@ const main = async () => {
         }
       }
 
-      // console.log(cover, arrayContent);
+      const createdTime = new Date(
+        page.data.response.created_time
+      ).toLocaleDateString("en-us", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+      });
+
+      const markdownContent = createMarkdown(
+        title,
+        createdTime,
+        arrayContent.join("\n")
+      );
+
+      fs.writeFileSync(
+        `../src/content/reviews/${title.replaceAll(" ", "_")}.md`,
+        markdownContent
+      );
     }
   }
 };
 
 main();
 
-fs.writeFileSync("../src/content/file.txt", "test");
+// fs.writeFileSync("../src/content/file.txt", "test");
