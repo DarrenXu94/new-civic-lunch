@@ -1,6 +1,7 @@
 // const fs = require("fs");
 import axios from "axios";
 import fs from "fs";
+import sharp from "sharp";
 
 const createMarkdown = (title, pubDate, content) => `---
 title: '${title}'
@@ -59,12 +60,23 @@ const main = async () => {
       await axios({
         method: "get",
         url: cover,
-        responseType: "stream",
-      }).then(function (response) {
+        responseType: "arraybuffer",
+      }).then(async function (response) {
         if (response.headers["content-type"] === "image/jpeg") {
-          response.data.pipe(
-            fs.createWriteStream(`../public/assets/covers/${titleNoSpace}.jpeg`)
-          );
+          const resizedImagePath = `../public/assets/covers/${titleNoSpace}.jpeg`;
+
+          try {
+            // Resize the image while maintaining aspect ratio using sharp library
+            const resizedBuffer = await sharp(Buffer.from(response.data))
+              .rotate()
+              .resize(800, null) // Specify the desired width (300 in this case), height will be adjusted to maintain aspect ratio
+              .toBuffer();
+
+            // Save the resized image
+            fs.writeFileSync(resizedImagePath, resizedBuffer);
+          } catch (err) {
+            console.error("Error resizing and saving image:", err);
+          }
         }
       });
 
