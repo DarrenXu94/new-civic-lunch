@@ -6,6 +6,7 @@ const createMarkdown = (title, pubDate, content) => `---
 title: '${title}'
 pubDate: '${pubDate}'
 heroImage: '/assets/covers/${title.replaceAll(" ", "_")}.jpeg'
+description: 'A review about ${title}'
 ---
 
 ${content}
@@ -33,16 +34,13 @@ const getData = async (id, type) => {
 };
 
 const main = async () => {
-  // console.log(url.toString());
-  // const res = await axios.get(url.toString());
   const res = await getData();
 
   const log = res.data.response;
 
-  // console.log(log);
+  // const resultsList = [log.results[log.results.length - 1]];
 
-  const resultsList = [log.results[0]];
-  // const resultsList = log.results;
+  const resultsList = log.results;
 
   if (log.results) {
     for (const result of resultsList) {
@@ -63,8 +61,6 @@ const main = async () => {
         url: cover,
         responseType: "stream",
       }).then(function (response) {
-        // console.log(response.headers["content-type"], "image response");
-
         if (response.headers["content-type"] === "image/jpeg") {
           response.data.pipe(
             fs.createWriteStream(`../public/assets/covers/${titleNoSpace}.jpeg`)
@@ -72,11 +68,8 @@ const main = async () => {
         }
       });
 
-      // let content = "";
       const arrayContent = [];
       for (let block of item.data.response.results) {
-        // console.log(block);
-        // content += block.paragraph?.rich_text[0]?.plain_text;
         const plainText = block.paragraph?.rich_text[0]?.plain_text;
         if (plainText) {
           arrayContent.push(block.paragraph?.rich_text[0]?.plain_text);
@@ -94,7 +87,7 @@ const main = async () => {
       const markdownContent = createMarkdown(
         title,
         createdTime,
-        arrayContent.join("\n")
+        arrayContent.join("\n\n")
       );
 
       fs.writeFileSync(
