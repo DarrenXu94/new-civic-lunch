@@ -1,6 +1,7 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
 import BlogPost from "../../layouts/BlogPost.astro";
+import ReviewContent from "../../components/ReviewContent.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("reviews");
@@ -12,9 +13,10 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<"reviews">;
 
 const post = Astro.props;
-const { Content } = await post.render();
+
+const splitContent = post.body.split("\n");
 ---
 
 <BlogPost {...post.data}>
-  <Content />
+  {splitContent.map((content) => <ReviewContent data={content} />)}
 </BlogPost>
