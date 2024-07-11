@@ -77,6 +77,8 @@ const main = async () => {
           } catch (err) {
             console.error("Error resizing and saving image:", err);
           }
+        } else {
+          console.log("Invalid cover photo format");
         }
       });
 
