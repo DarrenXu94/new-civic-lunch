@@ -7,8 +7,6 @@ description: 'A review about Psychedeli'
 
 Schnitty lunch deal $18
 
-Very nice chips
-
-No gravy with schnitty thou
+Decent sized schnitty, solid salad, very nice chips. No gravy with schnitty though which was a bit disappointing. Medium service speed, would only go if I had some time to spare. The sit inside environment was also not super pleasant, just passable.
 
 Rating: A-
