@@ -3,7 +3,7 @@ title: 'Fish Shack'
 pubDate: 'Jan 7, 2024'
 heroImage: '/assets/covers/Fish_Shack.jpeg'
 description: 'A review about Fish Shack'
-icon: null
+icon: 🎣
 ---
 
 Fish shack is a cute lil hut serving up tasty seafood and vegan options. Location is kinda weird cause it’s on the side of the road with moderate traffic flow but also pretty central and easy to walk to. I appreciate the cute ocean artwork around the building.

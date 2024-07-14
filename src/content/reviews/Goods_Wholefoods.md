@@ -3,7 +3,7 @@ title: 'Goods Wholefoods'
 pubDate: 'Apr 18, 2024'
 heroImage: '/assets/covers/Goods_Wholefoods.jpeg'
 description: 'A review about Goods Wholefoods'
-icon: null
+icon: 🥑
 ---
 
 Chicken kale wrap $16.90

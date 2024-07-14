@@ -3,7 +3,7 @@ title: 'Papa Rich'
 pubDate: 'Jan 7, 2024'
 heroImage: '/assets/covers/Papa_Rich.jpeg'
 description: 'A review about Papa Rich'
-icon: null
+icon: 🥢
 ---
 
 Papa Rich a cute lil Malay style restaurant based in the heart of the city. The restaurant itself is actually hella fancy with some very aesthetic interior decor and plant vibes. This caught me by surprise when I saw the prices of the food as it was actually extremely reasonable.

@@ -3,7 +3,7 @@ title: 'Izumi'
 pubDate: 'Jul 1, 2024'
 heroImage: '/assets/covers/Izumi.jpeg'
 description: 'A review about Izumi'
-icon: null
+icon: 🍱
 ---
 
 Cheap korean lunch place

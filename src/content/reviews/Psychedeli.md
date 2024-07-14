@@ -3,7 +3,7 @@ title: 'Psychedeli'
 pubDate: 'Jul 9, 2024'
 heroImage: '/assets/covers/Psychedeli.jpeg'
 description: 'A review about Psychedeli'
-icon: null
+icon: 🍄
 ---
 
 Schnitty lunch deal $18

@@ -3,7 +3,7 @@ title: 'iPho'
 pubDate: 'Jan 7, 2024'
 heroImage: '/assets/covers/iPho.jpeg'
 description: 'A review about iPho'
-icon: null
+icon: 🇻🇳
 ---
 
 iPho is a cute lil Vietnamese restaurant in the heart of the city. The outdoor sitting area is a visually unappealing area with hoards of magpies swarming and high foot traffic walking past. That’s when you know the pho is gonna be lit.

@@ -3,7 +3,7 @@ title: 'OMI'
 pubDate: 'Jan 7, 2024'
 heroImage: '/assets/covers/OMI.jpeg'
 description: 'A review about OMI'
-icon: null
+icon: 🍱
 ---
 
 O﻿MI is a cute lil Japanese restaurant located outside where I normally get yelled at by homeless people. The restaurant has a fat Japandi vibe (look it up it’s a real term) and even let me sit on the comfy squishy couches at a four person table where there were only two of us.

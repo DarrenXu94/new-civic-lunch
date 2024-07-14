@@ -3,7 +3,7 @@ title: 'Terra'
 pubDate: 'Dec 15, 2023'
 heroImage: '/assets/covers/Terra.jpeg'
 description: 'A review about Terra'
-icon: null
+icon: 🍗
 ---
 
 Lunch deal $26 bucks

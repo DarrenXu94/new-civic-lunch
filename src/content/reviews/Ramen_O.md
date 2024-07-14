@@ -3,7 +3,7 @@ title: 'Ramen O'
 pubDate: 'Jan 10, 2024'
 heroImage: '/assets/covers/Ramen_O.jpeg'
 description: 'A review about Ramen O'
-icon: null
+icon: 🍥
 ---
 
 Ramen $24

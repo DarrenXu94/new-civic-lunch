@@ -3,7 +3,7 @@ title: 'Fonda'
 pubDate: 'Jan 7, 2024'
 heroImage: '/assets/covers/Fonda.jpeg'
 description: 'A review about Fonda'
-icon: null
+icon: 🌮
 ---
 
 Every time I walk past this place it is chocca bloc full of people so I had high expectations. The restaurant is pretty new and I’ve always wanted to try it. I normally love mexican food but this place was pretty meh to me.
