@@ -1,6 +1,6 @@
 ---
 title: 'OMI'
-pubDate: 'Jan 7, 2024'
+pubDate: 'Feb 22, 2023'
 heroImage: '/assets/covers/OMI.jpeg'
 description: 'A review about OMI'
 icon: 🍱

@@ -75,10 +75,8 @@ const main = async () => {
 
   const resultsList = log.results;
 
-  const testList = [resultsList[0]];
-
   if (log.results) {
-    for (const result of testList) {
+    for (const result of resultsList) {
       console.log(result.child_page.title);
       const id = result.id;
       const page = await getData(id, "page"); // for cover photo only

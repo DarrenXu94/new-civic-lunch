@@ -1,6 +1,6 @@
 ---
 title: 'Marvie and Wolfe'
-pubDate: 'Jan 7, 2024'
+pubDate: 'Mar 7, 2023'
 heroImage: '/assets/covers/Marvie_and_Wolfe.jpeg'
 description: 'A review about Marvie and Wolfe'
 icon: 🐺

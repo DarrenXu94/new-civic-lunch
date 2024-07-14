@@ -1,6 +1,6 @@
 ---
 title: 'Papa Rich'
-pubDate: 'Jan 7, 2024'
+pubDate: 'Apr 3, 2023'
 heroImage: '/assets/covers/Papa_Rich.jpeg'
 description: 'A review about Papa Rich'
 icon: 🥢

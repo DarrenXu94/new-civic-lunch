@@ -1,6 +1,6 @@
 ---
 title: 'Tikka Take'
-pubDate: 'Jan 7, 2024'
+pubDate: 'Mar 15, 2023'
 heroImage: '/assets/covers/Tikka_Take.jpeg'
 description: 'A review about Tikka Take'
 icon: 🍛

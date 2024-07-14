@@ -1,6 +1,6 @@
 ---
 title: 'Sandoochie'
-pubDate: 'Jan 7, 2024'
+pubDate: 'Mar 21, 2023'
 heroImage: '/assets/covers/Sandoochie.jpeg'
 description: 'A review about Sandoochie'
 icon: 🥪

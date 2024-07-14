@@ -1,6 +1,6 @@
 ---
 title: 'Bamiyan'
-pubDate: 'Jan 7, 2024'
+pubDate: 'Apr 17, 2023'
 heroImage: '/assets/covers/Bamiyan.jpeg'
 description: 'A review about Bamiyan'
 icon: 🥘

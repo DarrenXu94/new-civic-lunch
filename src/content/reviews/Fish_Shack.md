@@ -1,6 +1,6 @@
 ---
 title: 'Fish Shack'
-pubDate: 'Jan 7, 2024'
+pubDate: 'Mar 28, 2023'
 heroImage: '/assets/covers/Fish_Shack.jpeg'
 description: 'A review about Fish Shack'
 icon: 🎣

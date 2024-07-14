@@ -1,6 +1,6 @@
 ---
 title: 'Fonda'
-pubDate: 'Jan 7, 2024'
+pubDate: 'Aug 18, 2023'
 heroImage: '/assets/covers/Fonda.jpeg'
 description: 'A review about Fonda'
 icon: 🌮

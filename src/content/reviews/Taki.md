@@ -1,6 +1,6 @@
 ---
 title: 'Taki'
-pubDate: 'Jan 7, 2024'
+pubDate: 'Feb 15, 2023'
 heroImage: '/assets/covers/Taki.jpeg'
 description: 'A review about Taki'
 icon: 🍣

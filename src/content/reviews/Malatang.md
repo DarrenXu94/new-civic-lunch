@@ -1,6 +1,6 @@
 ---
 title: 'Malatang'
-pubDate: 'Jan 7, 2024'
+pubDate: 'Mar 1, 2023'
 heroImage: '/assets/covers/Malatang.jpeg'
 description: 'A review about Malatang'
 icon: 🌶️

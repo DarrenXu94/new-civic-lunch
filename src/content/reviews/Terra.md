@@ -1,6 +1,6 @@
 ---
 title: 'Terra'
-pubDate: 'Dec 15, 2023'
+pubDate: 'Feb 28, 2023'
 heroImage: '/assets/covers/Terra.jpeg'
 description: 'A review about Terra'
 icon: 🍗
