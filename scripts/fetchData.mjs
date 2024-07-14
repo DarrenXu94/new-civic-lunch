@@ -60,6 +60,14 @@ async function downloadImage(url, outputPath) {
   }
 }
 
+function createFormattedDate(dateString) {
+  let [day, month, year] = dateString
+    .split("/")
+    .map((part) => parseInt(part, 10));
+  let date = new Date(year, month - 1, day);
+  return date;
+}
+
 const main = async () => {
   const res = await getData();
 
@@ -67,8 +75,10 @@ const main = async () => {
 
   const resultsList = log.results;
 
+  const testList = [resultsList[0]];
+
   if (log.results) {
-    for (const result of resultsList) {
+    for (const result of testList) {
       console.log(result.child_page.title);
       const id = result.id;
       const page = await getData(id, "page"); // for cover photo only
@@ -109,7 +119,7 @@ const main = async () => {
         console.log("Error downloading image:", error);
       }
 
-      const arrayContent = [];
+      let arrayContent = [];
       for (let block of item.data.response.results) {
         const plainText = block.paragraph?.rich_text[0]?.plain_text;
         if (plainText) {
@@ -117,9 +127,23 @@ const main = async () => {
         }
       }
 
-      const createdTime = new Date(
-        page.data.response.created_time
-      ).toLocaleDateString("en-us", {
+      const hasActualDate = arrayContent.findIndex((content) => {
+        if (content.startsWith("Meta Actual date:")) {
+          return true;
+        }
+      });
+
+      let created_time = page.data.response.created_time;
+
+      if (hasActualDate !== -1) {
+        created_time = createFormattedDate(
+          arrayContent[hasActualDate].split(":")[1].trim()
+        );
+
+        arrayContent.splice(hasActualDate, 1);
+      }
+
+      const createdTime = new Date(created_time).toLocaleDateString("en-us", {
         year: "numeric",
         month: "short",
         day: "numeric",
