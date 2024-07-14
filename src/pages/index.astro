@@ -7,7 +7,7 @@ import { getCollection } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
 
 const posts = (await getCollection("reviews")).sort(
-  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 ---
 
@@ -43,15 +43,15 @@ const posts = (await getCollection("reviews")).sort(
         text-decoration: none;
         transition: 0.2s ease;
       }
-      ul li:first-child {
+      ul li:nth-child(3n-2) {
         width: 100%;
         margin-bottom: 1rem;
         text-align: center;
       }
-      ul li:first-child img {
+      ul li:nth-child(3n-2) img {
         width: 100%;
       }
-      ul li:first-child .title {
+      ul li:nth-child(3n-2) .title {
         font-size: 2.369rem;
       }
       ul li img {

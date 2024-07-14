@@ -34,12 +34,35 @@ const getData = async (id, type) => {
   return axios.get(url.toString());
 };
 
+/**
+ * Function to download an image from a URL or base64 data URL
+ * @param {string} url - The URL or base64 data URL of the image
+ * @param {string} outputPath - The path where the image will be saved
+ */
+async function downloadImage(url, outputPath) {
+  try {
+    if (url.startsWith("data:image")) {
+      if (!url.startsWith("data:image/jpeg")) return console.log("Not JPEG");
+      // Handle base64 data URL
+      const base64Data = url.split(",")[1];
+      const buffer = Buffer.from(base64Data, "base64");
+      fs.writeFileSync(outputPath, buffer);
+      console.log("Image downloaded and saved as:", outputPath);
+    } else {
+      // Handle regular URL
+      const response = await axios.get(url, { responseType: "arraybuffer" });
+      fs.writeFileSync(outputPath, response.data);
+      console.log("Image downloaded and saved as:", outputPath);
+    }
+  } catch (error) {
+    console.error("Error downloading image:", error);
+  }
+}
+
 const main = async () => {
   const res = await getData();
 
   const log = res.data.response;
-
-  // const resultsList = [log.results[log.results.length - 1]];
 
   const resultsList = log.results;
 
@@ -62,9 +85,8 @@ const main = async () => {
         url: cover,
         responseType: "arraybuffer",
       }).then(async function (response) {
+        const resizedImagePath = `../public/assets/covers/${titleNoSpace}.jpeg`;
         if (response.headers["content-type"] === "image/jpeg") {
-          const resizedImagePath = `../public/assets/covers/${titleNoSpace}.jpeg`;
-
           try {
             // Resize the image while maintaining aspect ratio using sharp library
             const resizedBuffer = await sharp(Buffer.from(response.data))
@@ -78,7 +100,7 @@ const main = async () => {
             console.error("Error resizing and saving image:", err);
           }
         } else {
-          console.log("Invalid cover photo format");
+          await downloadImage(response.config.url, resizedImagePath);
         }
       });
 
@@ -113,5 +135,3 @@ const main = async () => {
 };
 
 main();
-
-// fs.writeFileSync("../src/content/file.txt", "test");
