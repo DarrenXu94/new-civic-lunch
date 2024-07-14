@@ -3,6 +3,7 @@ title: 'Raku'
 pubDate: 'Dec 15, 2023'
 heroImage: '/assets/covers/Raku.jpeg'
 description: 'A review about Raku'
+icon: null
 ---
 
 Lunch deal 60 dollar

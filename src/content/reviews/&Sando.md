@@ -3,6 +3,7 @@ title: '&Sando'
 pubDate: 'Apr 17, 2024'
 heroImage: '/assets/covers/&Sando.jpeg'
 description: 'A review about &Sando'
+icon: null
 ---
 
 Steak Sanga $25

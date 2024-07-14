@@ -3,6 +3,7 @@ title: 'Al’s Deli and Diner'
 pubDate: 'Jan 9, 2024'
 heroImage: '/assets/covers/Al’s_Deli_and_Diner.jpeg'
 description: 'A review about Al’s Deli and Diner'
+icon: null
 ---
 
 Schnitzel Sandwich - $18

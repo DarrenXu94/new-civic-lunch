@@ -3,6 +3,7 @@ title: 'Blu ginger'
 pubDate: 'Dec 8, 2023'
 heroImage: '/assets/covers/Blu_ginger.jpeg'
 description: 'A review about Blu ginger'
+icon: 🍚
 ---
 
 Lunch deal 22.90

@@ -3,6 +3,7 @@ title: 'Bashan'
 pubDate: 'Jul 11, 2024'
 heroImage: '/assets/covers/Bashan.jpeg'
 description: 'A review about Bashan'
+icon: 🍜
 ---
 
 Chinese style restaurant

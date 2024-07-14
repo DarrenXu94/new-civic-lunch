@@ -3,6 +3,7 @@ title: 'Marvie and Wolfe'
 pubDate: 'Jan 7, 2024'
 heroImage: '/assets/covers/Marvie_and_Wolfe.jpeg'
 description: 'A review about Marvie and Wolfe'
+icon: null
 ---
 
 Marvie and Wolfe is a cute lil cafe who apparently makes all their food from scratch (eg sauces and breads). They have a rotating menu and today I was lucky enough to try the grilled chicken salad.

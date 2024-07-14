@@ -3,11 +3,12 @@ import axios from "axios";
 import fs from "fs";
 import sharp from "sharp";
 
-const createMarkdown = (title, pubDate, content) => `---
+const createMarkdown = (title, pubDate, content, icon) => `---
 title: '${title}'
 pubDate: '${pubDate}'
 heroImage: '/assets/covers/${title.replaceAll(" ", "_")}.jpeg'
 description: 'A review about ${title}'
+icon: ${icon}
 ---
 
 ${content}
@@ -76,33 +77,37 @@ const main = async () => {
       const title = result.child_page.title;
       const titleNoSpace = title.replaceAll(" ", "_");
 
-      const cover =
-        page.data.response?.cover?.external?.url ||
-        page.data.response?.cover.file?.url;
+      try {
+        const cover =
+          page.data.response?.cover?.external?.url ||
+          page.data.response?.cover.file?.url;
 
-      await axios({
-        method: "get",
-        url: cover,
-        responseType: "arraybuffer",
-      }).then(async function (response) {
-        const resizedImagePath = `../public/assets/covers/${titleNoSpace}.jpeg`;
-        if (response.headers["content-type"] === "image/jpeg") {
-          try {
-            // Resize the image while maintaining aspect ratio using sharp library
-            const resizedBuffer = await sharp(Buffer.from(response.data))
-              .rotate()
-              .resize(800, null) // Specify the desired width (300 in this case), height will be adjusted to maintain aspect ratio
-              .toBuffer();
+        await axios({
+          method: "get",
+          url: cover,
+          responseType: "arraybuffer",
+        }).then(async function (response) {
+          const resizedImagePath = `../public/assets/covers/${titleNoSpace}.jpeg`;
+          if (response.headers["content-type"] === "image/jpeg") {
+            try {
+              // Resize the image while maintaining aspect ratio using sharp library
+              const resizedBuffer = await sharp(Buffer.from(response.data))
+                .rotate()
+                .resize(800, null) // Specify the desired width (300 in this case), height will be adjusted to maintain aspect ratio
+                .toBuffer();
 
-            // Save the resized image
-            fs.writeFileSync(resizedImagePath, resizedBuffer);
-          } catch (err) {
-            console.error("Error resizing and saving image:", err);
+              // Save the resized image
+              fs.writeFileSync(resizedImagePath, resizedBuffer);
+            } catch (err) {
+              console.error("Error resizing and saving image:", err);
+            }
+          } else {
+            await downloadImage(response.config.url, resizedImagePath);
           }
-        } else {
-          await downloadImage(response.config.url, resizedImagePath);
-        }
-      });
+        });
+      } catch (error) {
+        console.log("Error downloading image:", error);
+      }
 
       const arrayContent = [];
       for (let block of item.data.response.results) {
@@ -120,10 +125,15 @@ const main = async () => {
         day: "numeric",
       });
 
+      const icon = page.data.response.icon
+        ? page.data.response.icon.emoji
+        : null;
+
       const markdownContent = createMarkdown(
         title,
         createdTime,
-        arrayContent.join("\n\n")
+        arrayContent.join("\n\n"),
+        icon
       );
 
       fs.writeFileSync(
