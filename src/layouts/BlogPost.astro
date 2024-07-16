@@ -52,6 +52,12 @@ const { title, description, pubDate, heroImage, icon } = Astro.props;
       .last-updated-on {
         font-style: italic;
       }
+      .blog-heading {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.2em;
+      }
     </style>
   </head>
 
@@ -71,7 +77,10 @@ const { title, description, pubDate, heroImage, icon } = Astro.props;
             <div class="date">
               <FormattedDate date={pubDate} />
             </div>
-            <h1>{title} {icon}</h1>
+            <h1 class="blog-heading">
+              <span>{title}</span>
+              <span>{icon}</span>
+            </h1>
 
             <hr />
           </div>

@@ -60,6 +60,10 @@ const getImage = () => {
 const res = getImage();
 ---
 
-<div>
+<p>
   {res && <Image width={100} src={res} alt={`${rating.trim()} tier`} />}
-</div>
+</p>
+
+<a href={`/rating/${rating.trim().charAt(0)}/`}>
+  Discover reviews from other diners with similar ratings!
+</a>
