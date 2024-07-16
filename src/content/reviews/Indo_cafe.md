@@ -4,6 +4,7 @@ pubDate: 'Dec 19, 2023'
 heroImage: '/assets/covers/Indo_cafe.jpeg'
 description: 'A review about Indo cafe'
 icon: 🍲
+rating: B
 ---
 
 Lunch deal $10

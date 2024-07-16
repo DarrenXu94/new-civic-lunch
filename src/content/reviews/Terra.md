@@ -4,6 +4,7 @@ pubDate: 'Feb 28, 2023'
 heroImage: '/assets/covers/Terra.jpeg'
 description: 'A review about Terra'
 icon: 🍗
+rating: S
 ---
 
 Lunch deal $26 bucks

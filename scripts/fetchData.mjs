@@ -3,12 +3,13 @@ import axios from "axios";
 import fs from "fs";
 import sharp from "sharp";
 
-const createMarkdown = (title, pubDate, content, icon) => `---
+const createMarkdown = (title, pubDate, content, icon, rating) => `---
 title: '${title}'
 pubDate: '${pubDate}'
 heroImage: '/assets/covers/${title.replaceAll(" ", "_")}.jpeg'
 description: 'A review about ${title}'
 icon: ${icon}
+rating: ${rating}
 ---
 
 ${content}
@@ -76,6 +77,7 @@ const main = async () => {
   const resultsList = log.results;
 
   if (log.results) {
+    // for (const result of [resultsList[0]]) {
     for (const result of resultsList) {
       console.log(result.child_page.title);
       const id = result.id;
@@ -147,6 +149,18 @@ const main = async () => {
         day: "numeric",
       });
 
+      let rating;
+
+      const findRating = arrayContent.find((content) => {
+        if (content.startsWith("Rating:")) {
+          return true;
+        }
+      });
+
+      if (findRating) {
+        rating = findRating.split(":")[1].trim().charAt(0);
+      }
+
       const icon = page.data.response.icon
         ? page.data.response.icon.emoji
         : null;
@@ -155,7 +169,8 @@ const main = async () => {
         title,
         createdTime,
         arrayContent.join("\n\n"),
-        icon
+        icon,
+        rating
       );
 
       fs.writeFileSync(

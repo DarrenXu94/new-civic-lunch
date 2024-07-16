@@ -4,6 +4,7 @@ pubDate: 'Jan 8, 2024'
 heroImage: '/assets/covers/Bad_bunny.jpeg'
 description: 'A review about Bad bunny'
 icon: 🐰
+rating: B
 ---
 
 Bad bunny is a cute lil burger shop. From the outside it has a kinda tacky gross neon theme but inside was actually surprisingly clean. I’ve always avoided this place because it reminded my of Milky Lane and I HATED Milky Lane (Rest in Pieces).

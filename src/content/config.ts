@@ -11,6 +11,7 @@ const reviews = defineCollection({
     heroImage: z.string().optional(),
 
     icon: z.string().optional().nullable(),
+    rating: z.string(),
   }),
 });
 

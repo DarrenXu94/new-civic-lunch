@@ -4,6 +4,7 @@ pubDate: 'Mar 1, 2023'
 heroImage: '/assets/covers/Malatang.jpeg'
 description: 'A review about Malatang'
 icon: 🌶️
+rating: S
 ---
 
 Malatang is a cute lil Chinese Subway equivalent with soupy noodles instead of a bread roll. There are two Malatang restaurants located one shop apart located just outside the main civic area. These two restaurants literally share the same kitchen so I’m doing a TWO for ONE review deal.
