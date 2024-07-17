@@ -13,6 +13,6 @@ Cheap korean lunch place
 
 Rice, noodles, chicken, salad, some mayo
 
-Tasty but defs not filling
+Tasty but defs not filling. Definition of mid.
 
 Rating: B
