@@ -1,28 +1,27 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
+import BaseHead from "../../components/BaseHead.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
-import BaseHead from "../../components/BaseHead.astro";
 import {
   SITE_TITLE,
   SITE_DESCRIPTION,
   RATING_ARRAY,
   RATING_DESCRIPTIONS,
 } from "../../consts";
+import { getCollection } from "astro:content";
+import FormattedDate from "../../components/FormattedDate.astro";
 
-export async function getStaticPaths() {
-  const posts = await getCollection("reviews");
+import RatingImage from "../../components/RatingImage.astro";
 
-  return RATING_ARRAY.map((rating) => ({
-    params: { slug: rating },
-    props: {
-      posts: posts.filter((post) => post.data.rating === rating),
-      rating,
-    },
-  }));
-}
+// const posts = await getCollection("reviews");
+const posts = await getCollection("reviews");
 
-const posts = Astro.props;
+const groupedPosts = RATING_ARRAY.map((rating) => ({
+  rating,
+  // posts: posts.filter((post) => post.data.rating === rating),
+  count: posts.filter((post) => post.data.rating === rating).length,
+  description: RATING_DESCRIPTIONS[rating],
+}));
 ---
 
 <!doctype html>
@@ -84,6 +83,10 @@ const posts = Astro.props;
         box-shadow: var(--box-shadow);
       }
 
+      table {
+        border-spacing: 1rem;
+      }
+
       @media (max-width: 720px) {
         ul {
           gap: 0.5em;
@@ -100,40 +103,44 @@ const posts = Astro.props;
         }
       }
     </style>
+    <style is:global>
+      table img {
+        height: auto;
+      }
+    </style>
   </head>
   <body>
     <Header />
 
     <main>
-      <h1>
-        Viewing "{posts.rating}" rated diners
-      </h1>
-      <p>
-        {RATING_DESCRIPTIONS[posts.rating]}
-      </p>
-
-      <section>
-        <ul>
+      <h1>Ratings</h1>
+      <table>
+        <caption>Rating table</caption>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Rating</th>
+            <th>Description</th>
+            <th>Count</th>
+          </tr>
+        </thead>
+        <tbody>
           {
-            posts.posts.map((post) => (
-              <li>
-                <a href={`/blog/${post.slug}/`}>
-                  <img
-                    width={720}
-                    height={360}
-                    src={post.data.heroImage}
-                    alt=""
-                  />
-                  <h4 class="title">{post.data.title}</h4>
-                  <p class="date">
-                    {/* <FormattedDate date={post.data.pubDate} /> */}
-                  </p>
-                </a>
-              </li>
+            groupedPosts.map((rating) => (
+              <tr>
+                <td class="table-image">
+                  <RatingImage rating={rating.rating} size={200} />
+                </td>
+                <td>
+                  <a href={`/rating/${rating.rating}`}>{rating.rating}</a>
+                </td>
+                <td>{rating.description}</td>
+                <td>{rating.count}</td>
+              </tr>
             ))
           }
-        </ul>
-      </section>
+        </tbody>
+      </table>
     </main>
     <Footer />
   </body>
