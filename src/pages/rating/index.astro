@@ -53,13 +53,11 @@ const groupedPosts = RATING_ARRAY.map((rating) => ({
         }
         .responsive > tbody td,
         .responsive > tbody th {
-          /* display: block; */
           display: flex;
         }
 
         [row-header] {
           position: relative;
-          /* width: 50%;*/
           vertical-align: middle;
         }
         [row-header] div {
@@ -74,8 +72,6 @@ const groupedPosts = RATING_ARRAY.map((rating) => ({
           width: 25%;
           padding-right: 30px;
           white-space: nowrap;
-          /* overflow: hidden; */
-          /* display: flex; */
         }
 
         .table-image {
@@ -88,6 +84,13 @@ const groupedPosts = RATING_ARRAY.map((rating) => ({
       table img {
         height: auto;
         min-width: 50px;
+      }
+
+      .table-image a {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex-direction: column;
       }
       @media (max-width: 720px) {
         table img {
@@ -116,6 +119,7 @@ const groupedPosts = RATING_ARRAY.map((rating) => ({
                 <td class="table-image">
                   <a href={`/rating/${rating.rating}`}>
                     <RatingImage rating={rating.rating} size={200} />
+                    <b>{rating.rating} tier</b>
                   </a>
                 </td>
 
