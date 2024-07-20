@@ -32,40 +32,7 @@ const groupedPosts = RATING_ARRAY.map((rating) => ({
       main {
         width: 960px;
       }
-      ul {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-      }
-      ul li {
-        width: calc(50% - 1rem);
-      }
-      ul li * {
-        text-decoration: none;
-        transition: 0.2s ease;
-      }
-      ul li:first-child {
-        width: 100%;
-        margin-bottom: 1rem;
-        text-align: center;
-      }
-      ul li:first-child img {
-        width: 100%;
-      }
-      ul li:first-child .title {
-        font-size: 2.369rem;
-      }
-      ul li img {
-        margin-bottom: 0.5rem;
-        border-radius: 12px;
-        object-fit: cover;
-      }
-      ul li a {
-        display: block;
-      }
+
       .title {
         margin: 0;
         color: rgb(var(--black));
@@ -75,37 +42,57 @@ const groupedPosts = RATING_ARRAY.map((rating) => ({
         margin: 0;
         color: rgb(var(--gray));
       }
-      ul li a:hover h4,
-      ul li a:hover .date {
-        color: rgb(var(--accent));
-      }
-      ul a:hover img {
-        box-shadow: var(--box-shadow);
-      }
 
       table {
         border-spacing: 1rem;
       }
 
       @media (max-width: 720px) {
-        ul {
-          gap: 0.5em;
+        .responsive > thead th {
+          display: none;
         }
-        ul li {
-          width: 100%;
-          text-align: center;
+        .responsive > tbody td,
+        .responsive > tbody th {
+          /* display: block; */
+          display: flex;
         }
-        ul li:first-child {
-          margin-bottom: 0;
+
+        [row-header] {
+          position: relative;
+          /* width: 50%;*/
+          vertical-align: middle;
         }
-        ul li:first-child .title {
-          font-size: 1.563em;
+        [row-header] div {
+          width: 75%;
+        }
+        [row-header]:before {
+          font-weight: bold;
+          content: attr(row-header);
+          display: inline-block;
+          vertical-align: middle;
+          text-align: left;
+          width: 25%;
+          padding-right: 30px;
+          white-space: nowrap;
+          /* overflow: hidden; */
+          /* display: flex; */
+        }
+
+        .table-image {
+          display: flex;
+          justify-content: center;
         }
       }
     </style>
     <style is:global>
       table img {
         height: auto;
+        min-width: 50px;
+      }
+      @media (max-width: 720px) {
+        table img {
+          max-width: 100px;
+        }
       }
     </style>
   </head>
@@ -114,11 +101,9 @@ const groupedPosts = RATING_ARRAY.map((rating) => ({
 
     <main>
       <h1>Ratings</h1>
-      <table>
-        <caption>Rating table</caption>
+      <table class="table-bordered responsive">
         <thead>
           <tr>
-            <th></th>
             <th>Rating</th>
             <th>Description</th>
             <th>Count</th>
@@ -129,13 +114,17 @@ const groupedPosts = RATING_ARRAY.map((rating) => ({
             groupedPosts.map((rating) => (
               <tr>
                 <td class="table-image">
-                  <RatingImage rating={rating.rating} size={200} />
+                  <a href={`/rating/${rating.rating}`}>
+                    <RatingImage rating={rating.rating} size={200} />
+                  </a>
                 </td>
-                <td>
-                  <a href={`/rating/${rating.rating}`}>{rating.rating}</a>
+
+                <td row-header="Description">
+                  <div>{rating.description}</div>
                 </td>
-                <td>{rating.description}</td>
-                <td>{rating.count}</td>
+                <td row-header="Count">
+                  <div>{rating.count}</div>
+                </td>
               </tr>
             ))
           }
