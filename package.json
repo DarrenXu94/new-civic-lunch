@@ -9,7 +9,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "middleware": "netlify functions:serve",
-    "fetch-data": "cd scripts && node fetchData.mjs"
+    "fetch-data": "cd scripts && node fetchData.mjs",
+    "fetch-new-data": "cd scripts && node fetchData.mjs new-only"
   },
   "dependencies": {
     "@astrojs/check": "^0.3.1",

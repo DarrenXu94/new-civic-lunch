@@ -69,7 +69,8 @@ function createFormattedDate(dateString) {
   return date;
 }
 
-const main = async () => {
+const main = async (newOnly) => {
+  // Gets all the ids for all the pages
   const res = await getData();
 
   const log = res.data.response;
@@ -79,6 +80,18 @@ const main = async () => {
   if (log.results) {
     // for (const result of [resultsList[0]]) {
     for (const result of resultsList) {
+      // If this is a newOnly run, check if the file already exists
+
+      if (newOnly) {
+        const title = result.child_page.title;
+        const titleNoSpace = title.replaceAll(" ", "_");
+
+        if (fs.existsSync(`../src/content/reviews/${titleNoSpace}.md`)) {
+          console.log(`Skipping ${title} as it already exists`);
+          continue;
+        }
+      }
+
       console.log(result.child_page.title);
       const id = result.id;
       const page = await getData(id, "page"); // for cover photo only
@@ -181,4 +194,10 @@ const main = async () => {
   }
 };
 
-main();
+const args = process.argv.slice(2);
+
+if (args.includes("new-only")) {
+  main(true);
+} else {
+  main();
+}
