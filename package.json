@@ -10,7 +10,8 @@
     "astro": "astro",
     "middleware": "netlify functions:serve",
     "fetch-data": "cd scripts && node fetchData.mjs",
-    "fetch-new-data": "cd scripts && node fetchData.mjs new-only"
+    "fetch-new-data": "cd scripts && node fetchData.mjs new-only",
+    "fetch-and-build": "NODE_ENV=production npm run fetch-data && npm run build"
   },
   "dependencies": {
     "@astrojs/check": "^0.3.1",
