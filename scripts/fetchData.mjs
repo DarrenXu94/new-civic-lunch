@@ -2,6 +2,12 @@
 import axios from "axios";
 import fs from "fs";
 import sharp from "sharp";
+import NotionApiService from "./notionApiService.js";
+import downloadImage from "./downloadImage.js";
+
+const isLocalHost = process.env.NODE_ENV !== "production";
+
+const notionApiService = new NotionApiService(isLocalHost);
 
 const createMarkdown = (title, pubDate, content, icon, rating) => `---
 title: '${title}'
@@ -15,52 +21,6 @@ rating: ${rating}
 ${content}
 `;
 
-const BASE_URL = process.env.URL;
-const LOCAL_URL = "http://localhost:9999";
-
-const FUNCTION_LINK = "/.netlify/functions/notion";
-
-const getData = async (id, type) => {
-  const isLocalHost = true;
-
-  const url = new URL(`${isLocalHost ? LOCAL_URL : BASE_URL}${FUNCTION_LINK}`);
-
-  if (id) {
-    url.searchParams.set("id", id);
-  }
-
-  if (type) {
-    url.searchParams.set("type", type);
-  }
-
-  return axios.get(url.toString());
-};
-
-/**
- * Function to download an image from a URL or base64 data URL
- * @param {string} url - The URL or base64 data URL of the image
- * @param {string} outputPath - The path where the image will be saved
- */
-async function downloadImage(url, outputPath) {
-  try {
-    if (url.startsWith("data:image")) {
-      if (!url.startsWith("data:image/jpeg")) return console.log("Not JPEG");
-      // Handle base64 data URL
-      const base64Data = url.split(",")[1];
-      const buffer = Buffer.from(base64Data, "base64");
-      fs.writeFileSync(outputPath, buffer);
-      console.log("Image downloaded and saved as:", outputPath);
-    } else {
-      // Handle regular URL
-      const response = await axios.get(url, { responseType: "arraybuffer" });
-      fs.writeFileSync(outputPath, response.data);
-      console.log("Image downloaded and saved as:", outputPath);
-    }
-  } catch (error) {
-    console.error("Error downloading image:", error);
-  }
-}
-
 function createFormattedDate(dateString) {
   let [day, month, year] = dateString
     .split("/")
@@ -71,7 +31,7 @@ function createFormattedDate(dateString) {
 
 const main = async (newOnly) => {
   // Gets all the ids for all the pages
-  const res = await getData();
+  const res = await notionApiService.getAllBlogs();
 
   const log = res.data.response;
 
@@ -94,8 +54,8 @@ const main = async (newOnly) => {
 
       console.log(result.child_page.title);
       const id = result.id;
-      const page = await getData(id, "page"); // for cover photo only
-      const item = await getData(id); // page content
+      const page = await notionApiService.getPageData(id);
+      const item = await notionApiService.getPageContent(id);
 
       const title = result.child_page.title;
       const titleNoSpace = title.replaceAll(" ", "_");
