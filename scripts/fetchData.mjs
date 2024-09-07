@@ -12,7 +12,7 @@ console.log(process.env.NODE_ENV);
 const notionApiService = new NotionApiService(isLocalHost);
 
 const cleanName = (name) => {
-  return name.replace(/'/g, "&#x27;");
+  return name.replace(/'/g, "");
 };
 
 const createMarkdown = (title, pubDate, content, icon, rating) => `---

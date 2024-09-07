@@ -1,8 +1,8 @@
 ---
-title: 'Madame Duong&#x27;s'
+title: 'Madame Duongs'
 pubDate: 'Aug 28, 2024'
-heroImage: '/assets/covers/Madame_Duong&#x27;s.jpeg'
-description: 'A review about Madame Duong&#x27;s'
+heroImage: '/assets/covers/Madame_Duongs.jpeg'
+description: 'A review about Madame Duongs'
 icon: 🍜
 rating: A
 ---
