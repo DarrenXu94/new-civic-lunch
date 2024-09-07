@@ -7,6 +7,8 @@ import downloadImage from "./downloadImage.js";
 
 const isLocalHost = process.env.NODE_ENV !== "production";
 
+console.log(process.env.NODE_ENV);
+
 const notionApiService = new NotionApiService(isLocalHost);
 
 const createMarkdown = (title, pubDate, content, icon, rating) => `---

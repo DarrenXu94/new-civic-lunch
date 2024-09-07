@@ -11,6 +11,7 @@ const MAINID = "c40b0c12d45b453ba4f02b954c8d3d06"; // ID of the main page
 
 class NotionApiService {
   constructor(localHost, key) {
+    console.log("Localhost: ", localHost);
     // If localhost create a notion client object and save in class locally, otherwise use api calls
     this.isLocalHost = localHost;
     if (this.isLocalHost) {
