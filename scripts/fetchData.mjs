@@ -11,11 +11,15 @@ console.log(process.env.NODE_ENV);
 
 const notionApiService = new NotionApiService(isLocalHost);
 
+const cleanName = (name) => {
+  return name.replace(/'/g, "&#x27;");
+};
+
 const createMarkdown = (title, pubDate, content, icon, rating) => `---
-title: '${title}'
+title: '${cleanName(title)}'
 pubDate: '${pubDate}'
-heroImage: '/assets/covers/${title.replaceAll(" ", "_")}.jpeg'
-description: 'A review about ${title}'
+heroImage: '/assets/covers/${cleanName(title).replaceAll(" ", "_")}.jpeg'
+description: 'A review about ${cleanName(title)}'
 icon: ${icon}
 rating: ${rating}
 ---
@@ -46,10 +50,10 @@ const main = async (newOnly) => {
 
       if (newOnly) {
         const title = result.child_page.title;
-        const titleNoSpace = title.replaceAll(" ", "_");
+        const titleNoSpace = cleanName(title).replaceAll(" ", "_");
 
         if (fs.existsSync(`../src/content/reviews/${titleNoSpace}.md`)) {
-          console.log(`Skipping ${title} as it already exists`);
+          console.log(`Skipping ${cleanName(title)} as it already exists`);
           continue;
         }
       }
@@ -60,7 +64,7 @@ const main = async (newOnly) => {
       const item = await notionApiService.getPageContent(id);
 
       const title = result.child_page.title;
-      const titleNoSpace = title.replaceAll(" ", "_");
+      const titleNoSpace = cleanName(title).replaceAll(" ", "_");
 
       try {
         const cover =
@@ -149,7 +153,7 @@ const main = async (newOnly) => {
       );
 
       fs.writeFileSync(
-        `../src/content/reviews/${title.replaceAll(" ", "_")}.md`,
+        `../src/content/reviews/${cleanName(title).replaceAll(" ", "_")}.md`,
         markdownContent
       );
     }

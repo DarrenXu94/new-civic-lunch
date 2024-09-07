@@ -4,7 +4,7 @@ pubDate: 'Aug 14, 2024'
 heroImage: '/assets/covers/Food_co-op.jpeg'
 description: 'A review about Food co-op'
 icon: ♻️
-rating: A
+rating: B
 ---
 
 Surprisingly wholesome lunch vibes.
@@ -17,4 +17,4 @@ Cosy inside seating area with an attached bulk wholefoods shop. The whole vibe w
 
 I got a lentil soup today with rice and vegetables. Pretty tasty, could have done with a bit more salt. Amount kinda low but price was low so it makes up. Food rating wouldn’t be too high but the vibes brings it up.
 
-Rating: A
+Rating: B

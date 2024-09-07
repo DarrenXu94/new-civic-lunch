@@ -4,7 +4,7 @@ pubDate: 'Apr 17, 2024'
 heroImage: '/assets/covers/&Sando.jpeg'
 description: 'A review about &Sando'
 icon: 🍖
-rating: B
+rating: C
 ---
 
 Steak Sanga $25
@@ -23,4 +23,4 @@ Other ingredients: Pretty tasty and moist
 
 Would I go there again? No. For $25 bucks I’d go to literally anywhere else for a sandwich.
 
-Rating: B
+Rating: C
