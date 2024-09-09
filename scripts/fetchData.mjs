@@ -4,6 +4,8 @@ import fs from "fs";
 import sharp from "sharp";
 import NotionApiService from "./notionApiService.js";
 import downloadImage from "./downloadImage.js";
+import urlExtension from "./urlExtension.js";
+import createFolderIfNotExists from "./createFolderIfNotExists.js";
 
 const isLocalHost = process.env.NODE_ENV !== "production";
 
@@ -59,6 +61,10 @@ const main = async (newOnly) => {
       }
 
       console.log(result.child_page.title);
+      if (result.child_page.title !== "Flames Galore") {
+        continue;
+      }
+      console.log("flames galore only");
       const id = result.id;
       const page = await notionApiService.getPageData(id);
       const item = await notionApiService.getPageContent(id);
@@ -99,10 +105,23 @@ const main = async (newOnly) => {
       }
 
       let arrayContent = [];
+      let imgIdx = 0;
       for (let block of item.data.response.results) {
         const plainText = block.paragraph?.rich_text[0]?.plain_text;
         if (plainText) {
           arrayContent.push(block.paragraph?.rich_text[0]?.plain_text);
+        }
+        const img = block.image?.file?.url;
+        if (img) {
+          const ext = urlExtension(img);
+          arrayContent.push(`IMG: ${imgIdx}.${ext}`);
+
+          createFolderIfNotExists(`../public/assets/content/${titleNoSpace}`);
+
+          const contentImagePath = `../public/assets/content/${titleNoSpace}/${imgIdx}.${ext}`;
+
+          await downloadImage(img, contentImagePath);
+          imgIdx++;
         }
       }
 

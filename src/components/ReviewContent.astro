@@ -1,14 +1,18 @@
 ---
 import Rating from "./Rating.astro";
-const { data } = Astro.props;
+const { data, title } = Astro.props;
 ---
 
 <div>
   {
     data.startsWith("Rating:") ? (
       <Rating rating={data.split("Rating:")[1]} />
+    ) : data.startsWith("IMG: ") ? (
+      <img
+        src={`/assets/content/${title.replaceAll(" ", "_")}/${data.split("IMG: ")[1]}`}
+      />
     ) : (
-      data
+      <p>{data}</p>
     )
   }
 </div>

@@ -13,4 +13,6 @@ I got the stonegrill steak and gad dam it was good. Perfectly cooked due to the 
 
 This place will be very popular soon and I imagine the prices are some sort of introductory offer, but as of this moment this is TOP TIER.
 
+IMG: 0.png
+
 Rating: S

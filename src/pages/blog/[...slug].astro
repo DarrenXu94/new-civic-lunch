@@ -18,7 +18,11 @@ const splitContent = post.body.split("\n");
 ---
 
 <BlogPost {...post.data}>
-  {splitContent.map((content) => <ReviewContent data={content} />)}
+  {
+    splitContent.map((content) => (
+      <ReviewContent data={content} title={post.data.title} />
+    ))
+  }
 
   <script
     src="https://utteranc.es/client.js"
