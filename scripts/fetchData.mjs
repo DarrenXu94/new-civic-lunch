@@ -60,11 +60,6 @@ const main = async (newOnly) => {
         }
       }
 
-      console.log(result.child_page.title);
-      if (result.child_page.title !== "Flames Galore") {
-        continue;
-      }
-      console.log("flames galore only");
       const id = result.id;
       const page = await notionApiService.getPageData(id);
       const item = await notionApiService.getPageContent(id);
