@@ -11,6 +11,14 @@ Sandoochie (AKA Le Dooch) is a cute lil sandwich shop offering home made sandwic
 
 Thoughts:
 
+- you better love cheese cause it’s creamy. Luckily I do love cheese.
+
+- quite small and not quite filling enough. Maybe get 2 if you’re hungry.
+
+- flavours were exciting and different
+
+- expensive
+
 Would recommend eggplant schnit
 
 Rating: B+

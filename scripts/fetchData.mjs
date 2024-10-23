@@ -102,9 +102,15 @@ const main = async (newOnly) => {
       let arrayContent = [];
       let imgIdx = 0;
       for (let block of item.data.response.results) {
+        // console.log(block);
         const plainText = block.paragraph?.rich_text[0]?.plain_text;
         if (plainText) {
           arrayContent.push(block.paragraph?.rich_text[0]?.plain_text);
+        }
+        const bulletedText =
+          block.bulleted_list_item?.rich_text[0]?.text.content;
+        if (bulletedText) {
+          arrayContent.push(`- ${bulletedText}`);
         }
         const img = block.image?.file?.url;
         if (img) {

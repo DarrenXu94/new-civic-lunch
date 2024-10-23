@@ -1,6 +1,10 @@
 ---
 import Rating from "./Rating.astro";
+import { marked } from "marked";
+
 const { data, title } = Astro.props;
+
+const htmlContent = marked(data);
 ---
 
 <div>
@@ -12,7 +16,7 @@ const { data, title } = Astro.props;
         src={`/assets/content/${title.replaceAll(" ", "_")}/${data.split("IMG: ")[1]}`}
       />
     ) : (
-      <p>{data}</p>
+      <div set:html={htmlContent} />
     )
   }
 </div>
