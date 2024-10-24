@@ -1,6 +1,7 @@
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import netlify from "@astrojs/netlify/functions";
+import pagefind from "astro-pagefind";
 
 import sitemap from "@astrojs/sitemap";
 
@@ -13,5 +14,5 @@ export default defineConfig({
   output: "static",
   // adapter: netlify(),
 
-  integrations: [mdx(), sitemap()],
+  integrations: [mdx(), sitemap(), pagefind()],
 });
