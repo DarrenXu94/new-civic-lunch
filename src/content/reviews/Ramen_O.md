@@ -5,6 +5,7 @@ heroImage: '/assets/covers/Ramen_O.jpeg'
 description: 'A review about Ramen O'
 icon: 🍥
 rating: A
+graveyard: false
 ---
 
 Ramen $24

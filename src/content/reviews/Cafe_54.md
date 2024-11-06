@@ -5,6 +5,7 @@ heroImage: '/assets/covers/Cafe_54.jpeg'
 description: 'A review about Cafe 54'
 icon: ☕
 rating: B
+graveyard: false
 ---
 
 Schnitty roll $13

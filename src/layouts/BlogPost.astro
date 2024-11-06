@@ -7,7 +7,7 @@ import FormattedDate from "../components/FormattedDate.astro";
 
 type Props = CollectionEntry<"reviews">["data"];
 
-const { title, description, pubDate, heroImage, icon } = Astro.props;
+const { title, description, pubDate, heroImage, icon, graveyard } = Astro.props;
 ---
 
 <html lang="en">
@@ -83,6 +83,18 @@ const { title, description, pubDate, heroImage, icon } = Astro.props;
             </h1>
 
             <hr />
+            {
+              graveyard && (
+                <div class="graveyard">
+                  <p>
+                    <strong>
+                      🪦 RIP 🪦 Gone but never forgotten from the archives of
+                      lunch blog.
+                    </strong>
+                  </p>
+                </div>
+              )
+            }
           </div>
           <slot />
         </div>

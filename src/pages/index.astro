@@ -131,10 +131,13 @@ const alphabeticalPosts = (await getCollection("reviews")).sort((a, b) => {
                     src={post.data.heroImage}
                     alt=""
                   />
-                  <h4 class="title">{post.data.title}</h4>
+                  <h4 class="title">
+                    {post.data.title} {post.data.graveyard && "🪦 (Closed) "}
+                  </h4>
                   <p class="date">
                     <FormattedDate date={post.data.pubDate} />
                   </p>
+                  {post.data.graveyard && "🪦"}
                 </a>
               </li>
             ))
@@ -154,7 +157,9 @@ const alphabeticalPosts = (await getCollection("reviews")).sort((a, b) => {
                     src={post.data.heroImage}
                     alt=""
                   />
-                  <h4 class="title">{post.data.title}</h4>
+                  <h4 class="title">
+                    {post.data.title} {post.data.graveyard && "🪦 (Closed) "}
+                  </h4>
                   <p class="date">
                     <FormattedDate date={post.data.pubDate} />
                   </p>

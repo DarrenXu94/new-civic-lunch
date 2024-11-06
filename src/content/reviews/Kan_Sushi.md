@@ -5,6 +5,7 @@ heroImage: '/assets/covers/Kan_Sushi.jpeg'
 description: 'A review about Kan Sushi'
 icon: 🍣
 rating: A
+graveyard: false
 ---
 
 Kan you feel it? It's a great deal! 

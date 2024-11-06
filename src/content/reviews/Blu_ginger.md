@@ -5,6 +5,7 @@ heroImage: '/assets/covers/Blu_ginger.jpeg'
 description: 'A review about Blu ginger'
 icon: 🍛
 rating: A
+graveyard: false
 ---
 
 Lunch deal 22.90

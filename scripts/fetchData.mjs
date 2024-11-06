@@ -17,13 +17,21 @@ const cleanName = (name) => {
   return name.replace(/'/g, "’");
 };
 
-const createMarkdown = (title, pubDate, content, icon, rating) => `---
+const createMarkdown = (
+  title,
+  pubDate,
+  content,
+  icon,
+  rating,
+  graveyard
+) => `---
 title: '${cleanName(title)}'
 pubDate: '${pubDate}'
 heroImage: '/assets/covers/${cleanName(title).replaceAll(" ", "_")}.jpeg'
 description: 'A review about ${cleanName(title)}'
 icon: ${icon}
 rating: ${rating}
+graveyard: ${graveyard || false}
 ---
 
 ${content}
@@ -142,6 +150,16 @@ const main = async (newOnly) => {
         arrayContent.splice(hasActualDate, 1);
       }
 
+      const isGraveyard = arrayContent.findIndex((content) => {
+        if (content.startsWith("Meta Graveyard")) {
+          return true;
+        }
+      });
+
+      if (isGraveyard !== -1) {
+        arrayContent.splice(isGraveyard, 1);
+      }
+
       const createdTime = new Date(created_time).toLocaleDateString("en-us", {
         year: "numeric",
         month: "short",
@@ -169,7 +187,8 @@ const main = async (newOnly) => {
         createdTime,
         arrayContent.join("\n\n"),
         icon,
-        rating
+        rating,
+        isGraveyard !== -1
       );
 
       fs.writeFileSync(

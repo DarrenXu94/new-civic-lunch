@@ -5,6 +5,7 @@ heroImage: '/assets/covers/Raku.jpeg'
 description: 'A review about Raku'
 icon: 🇯🇵
 rating: A
+graveyard: false
 ---
 
 Lunch deal 60 dollar

@@ -5,6 +5,7 @@ heroImage: '/assets/covers/Tuckshop_Tamada.jpeg'
 description: 'A review about Tuckshop Tamada'
 icon: 🔥
 rating: B
+graveyard: false
 ---
 
 Long story short:

@@ -106,6 +106,7 @@ const posts = (await getCollection("reviews")).sort(
                   <p class="date">
                     <FormattedDate date={post.data.pubDate} />
                   </p>
+                  {post.data.graveyard && "🪦"}
                 </a>
               </li>
             ))

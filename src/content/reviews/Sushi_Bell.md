@@ -5,6 +5,7 @@ heroImage: '/assets/covers/Sushi_Bell.jpeg'
 description: 'A review about Sushi Bell'
 icon: 🔔
 rating: A
+graveyard: false
 ---
 
 Sushi Bell is a cute lil hole in the wall sushi restaurant. I came here today around 12:15 and there was a line of about 4 people. When I finished ordering the line had grown to about 15. This place is popular, and for good reason. The sushi they have here is extremely high quality, different to other varieties you get elsewhere (yeah im fkn looking at u chicken avo roll) and reasonably priced.

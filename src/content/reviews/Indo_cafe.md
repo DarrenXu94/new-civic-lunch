@@ -5,6 +5,7 @@ heroImage: '/assets/covers/Indo_cafe.jpeg'
 description: 'A review about Indo cafe'
 icon: 🍲
 rating: C
+graveyard: false
 ---
 
 Lunch deal $10

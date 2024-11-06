@@ -5,6 +5,7 @@ heroImage: '/assets/covers/Madame_Duong.jpeg'
 description: 'A review about Madame Duong'
 icon: 🍜
 rating: A
+graveyard: false
 ---
 
 Brand new restaurant alert! At the time of writing this place isn’t even on GOOGLE MAPS.

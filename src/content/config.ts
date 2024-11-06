@@ -12,6 +12,7 @@ const reviews = defineCollection({
 
     icon: z.string().optional().nullable(),
     rating: z.string(),
+    graveyard: z.boolean().optional(),
   }),
 });
 

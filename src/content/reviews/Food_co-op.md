@@ -5,6 +5,7 @@ heroImage: '/assets/covers/Food_co-op.jpeg'
 description: 'A review about Food co-op'
 icon: ♻️
 rating: B
+graveyard: false
 ---
 
 Surprisingly wholesome lunch vibes.

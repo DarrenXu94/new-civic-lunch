@@ -5,6 +5,7 @@ heroImage: '/assets/covers/Makanan.jpeg'
 description: 'A review about Makanan'
 icon: 🐔
 rating: B
+graveyard: false
 ---
 
 I stumbled upon this spot that had a pretty fun self-ordering system. It’s not something you see too often, so it was a cool little gimmick to try out. Food came out very fast despite how busy it was.

@@ -5,6 +5,7 @@ heroImage: '/assets/covers/Al’s_Deli_and_Diner.jpeg'
 description: 'A review about Al’s Deli and Diner'
 icon: 🍔
 rating: A
+graveyard: false
 ---
 
 Schnitzel Sandwich - $18

@@ -5,6 +5,7 @@ heroImage: '/assets/covers/Flames_Galore.jpeg'
 description: 'A review about Flames Galore'
 icon: 🔥
 rating: S
+graveyard: false
 ---
 
 This new restaurant opened a couple of doors down from where I work so I thought I’d check it out. I was the lunch deals on the outside and was immediately intrigued. $20 stone grill steak, $16 bangers and mash, $17 steak burger. Heck I was impressed.

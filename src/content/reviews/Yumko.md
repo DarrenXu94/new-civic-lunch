@@ -5,6 +5,7 @@ heroImage: '/assets/covers/Yumko.jpeg'
 description: 'A review about Yumko'
 icon: 🇰🇷
 rating: C
+graveyard: false
 ---
 
 Yumko is a cheap Korean restaurant. I got the Bulgolgi bento box for $20. It included rice, bulgolgi, random salad and some deep fried shit.

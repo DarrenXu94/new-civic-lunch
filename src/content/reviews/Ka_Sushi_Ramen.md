@@ -5,6 +5,7 @@ heroImage: '/assets/covers/Ka_Sushi_Ramen.jpeg'
 description: 'A review about Ka Sushi Ramen'
 icon: 🍥
 rating: B
+graveyard: false
 ---
 
 Combination ramen bowl with prawn tempura, char shui pork and corn. $18

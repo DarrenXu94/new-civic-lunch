@@ -5,6 +5,7 @@ heroImage: '/assets/covers/Psychedeli.jpeg'
 description: 'A review about Psychedeli'
 icon: 🍄
 rating: B
+graveyard: false
 ---
 
 Schnitty lunch deal $18

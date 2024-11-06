@@ -5,6 +5,7 @@ heroImage: '/assets/covers/Terra.jpeg'
 description: 'A review about Terra'
 icon: 🍗
 rating: S
+graveyard: false
 ---
 
 Lunch deal $26 bucks

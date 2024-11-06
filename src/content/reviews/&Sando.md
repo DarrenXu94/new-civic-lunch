@@ -5,6 +5,7 @@ heroImage: '/assets/covers/&Sando.jpeg'
 description: 'A review about &Sando'
 icon: 🍖
 rating: C
+graveyard: false
 ---
 
 Steak Sanga $25

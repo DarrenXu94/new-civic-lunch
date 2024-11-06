@@ -5,6 +5,7 @@ heroImage: '/assets/covers/Madam_Lu.jpeg'
 description: 'A review about Madam Lu'
 icon: 👵
 rating: B
+graveyard: false
 ---
 
 Malaysian food

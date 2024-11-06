@@ -5,6 +5,7 @@ heroImage: '/assets/covers/Amici.jpeg'
 description: 'A review about Amici'
 icon: 🥪
 rating: A
+graveyard: false
 ---
 
 I was sceptical about lunchtime sandbos since I got ripped off at &sando but this place has redeemed the humble sandwich

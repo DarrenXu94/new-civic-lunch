@@ -5,6 +5,7 @@ heroImage: '/assets/covers/Taki.jpeg'
 description: 'A review about Taki'
 icon: 🍣
 rating: B
+graveyard: false
 ---
 
 T﻿aki is a quaint lil o Japanese restaurant located in the new fancy schmancy wannabe Chinatown of civic. It looks super sleek and modern from outside. I visited this fine establishment for a romantic workplace lunch date on valentines day.

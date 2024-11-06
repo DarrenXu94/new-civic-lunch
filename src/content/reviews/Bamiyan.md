@@ -5,6 +5,7 @@ heroImage: '/assets/covers/Bamiyan.jpeg'
 description: 'A review about Bamiyan'
 icon: 🥘
 rating: A
+graveyard: false
 ---
 
 Bamiyan, more like BamiYUM am I right? Bamiyan is a cute lil Afghan shop that serves tasty meats. I’ve been here a few times at lunch and it’s always quiet, no idea why because the food slaps hard.

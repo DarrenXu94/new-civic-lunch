@@ -5,6 +5,7 @@ heroImage: '/assets/covers/Goods_Wholefoods.jpeg'
 description: 'A review about Goods Wholefoods'
 icon: 🥑
 rating: A
+graveyard: false
 ---
 
 Chicken kale wrap $16.90

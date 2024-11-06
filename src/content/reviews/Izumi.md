@@ -5,6 +5,7 @@ heroImage: '/assets/covers/Izumi.jpeg'
 description: 'A review about Izumi'
 icon: 🍱
 rating: C
+graveyard: true
 ---
 
 Cheap korean lunch place
@@ -16,3 +17,5 @@ Rice, noodles, chicken, salad, some mayo
 Tasty but defs not filling. Definition of mid.
 
 Rating: C
+
+RIP THIS PLACE IS CLOSED

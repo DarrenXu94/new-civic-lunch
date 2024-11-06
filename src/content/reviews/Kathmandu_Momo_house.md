@@ -5,6 +5,7 @@ heroImage: '/assets/covers/Kathmandu_Momo_house.jpeg'
 description: 'A review about Kathmandu Momo house'
 icon: 🇳🇵
 rating: B
+graveyard: false
 ---
 
 Momos 17 bucks

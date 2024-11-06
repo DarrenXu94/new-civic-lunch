@@ -5,6 +5,7 @@ heroImage: '/assets/covers/Asian_Noodle_House.jpeg'
 description: 'A review about Asian Noodle House'
 icon: 🍜
 rating: A
+graveyard: false
 ---
 
 Asian noodle house is a cute lil …uhh… asian themed restaurant. I arrived for lunch at 12:30 and there were only two seats left of a full room. Mostly white people.

@@ -5,6 +5,7 @@ heroImage: '/assets/covers/Amara.jpeg'
 description: 'A review about Amara'
 icon: 🍛
 rating: S
+graveyard: false
 ---
 
 Dis shit lit. Lunch deal curry + rice + naan for 21 bucks plus SPECIAL INTRO PRICE 10% off.

@@ -5,6 +5,7 @@ heroImage: '/assets/covers/Bashan.jpeg'
 description: 'A review about Bashan'
 icon: 🍜
 rating: A
+graveyard: false
 ---
 
 Chinese style restaurant
