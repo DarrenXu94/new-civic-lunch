@@ -1,7 +1,7 @@
 ---
 title: 'Indo cafe'
 pubDate: 'Dec 19, 2023'
-heroImage: '/assets/covers/Indo_cafe.jpeg'
+heroImage: '/assets/covers/Indo_cafe.webp'
 description: 'A review about Indo cafe'
 icon: 🍲
 rating: C

@@ -1,7 +1,7 @@
 ---
 title: 'Kan Sushi'
 pubDate: 'Jul 31, 2024'
-heroImage: '/assets/covers/Kan_Sushi.jpeg'
+heroImage: '/assets/covers/Kan_Sushi.webp'
 description: 'A review about Kan Sushi'
 icon: 🍣
 rating: A

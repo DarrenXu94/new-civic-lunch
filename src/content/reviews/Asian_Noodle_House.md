@@ -1,7 +1,7 @@
 ---
 title: 'Asian Noodle House'
 pubDate: 'Jan 7, 2024'
-heroImage: '/assets/covers/Asian_Noodle_House.jpeg'
+heroImage: '/assets/covers/Asian_Noodle_House.webp'
 description: 'A review about Asian Noodle House'
 icon: 🍜
 rating: A

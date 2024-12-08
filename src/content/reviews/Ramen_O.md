@@ -1,7 +1,7 @@
 ---
 title: 'Ramen O'
 pubDate: 'Jan 10, 2024'
-heroImage: '/assets/covers/Ramen_O.jpeg'
+heroImage: '/assets/covers/Ramen_O.webp'
 description: 'A review about Ramen O'
 icon: 🍥
 rating: A

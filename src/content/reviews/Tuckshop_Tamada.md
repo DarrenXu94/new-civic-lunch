@@ -1,7 +1,7 @@
 ---
 title: 'Tuckshop Tamada'
 pubDate: 'Aug 27, 2024'
-heroImage: '/assets/covers/Tuckshop_Tamada.jpeg'
+heroImage: '/assets/covers/Tuckshop_Tamada.webp'
 description: 'A review about Tuckshop Tamada'
 icon: 🔥
 rating: B

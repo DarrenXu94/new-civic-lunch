@@ -1,7 +1,7 @@
 ---
 title: 'Food co-op'
 pubDate: 'Aug 14, 2024'
-heroImage: '/assets/covers/Food_co-op.jpeg'
+heroImage: '/assets/covers/Food_co-op.webp'
 description: 'A review about Food co-op'
 icon: ♻️
 rating: B

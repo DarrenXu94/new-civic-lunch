@@ -1,7 +1,7 @@
 ---
 title: 'Izumi'
 pubDate: 'Jul 1, 2024'
-heroImage: '/assets/covers/Izumi.jpeg'
+heroImage: '/assets/covers/Izumi.webp'
 description: 'A review about Izumi'
 icon: 🍱
 rating: C

@@ -1,7 +1,7 @@
 ---
 title: 'Flames Galore'
 pubDate: 'Jul 15, 2024'
-heroImage: '/assets/covers/Flames_Galore.jpeg'
+heroImage: '/assets/covers/Flames_Galore.webp'
 description: 'A review about Flames Galore'
 icon: 🔥
 rating: S

@@ -1,7 +1,7 @@
 ---
 title: 'Marvie and Wolfe'
 pubDate: 'Mar 7, 2023'
-heroImage: '/assets/covers/Marvie_and_Wolfe.jpeg'
+heroImage: '/assets/covers/Marvie_and_Wolfe.webp'
 description: 'A review about Marvie and Wolfe'
 icon: 🐺
 rating: A

@@ -1,7 +1,7 @@
 ---
 title: 'Sushi Bell'
 pubDate: 'Sep 4, 2024'
-heroImage: '/assets/covers/Sushi_Bell.jpeg'
+heroImage: '/assets/covers/Sushi_Bell.webp'
 description: 'A review about Sushi Bell'
 icon: 🔔
 rating: A

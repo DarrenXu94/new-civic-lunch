@@ -1,7 +1,7 @@
 ---
 title: 'OMI'
 pubDate: 'Feb 22, 2023'
-heroImage: '/assets/covers/OMI.jpeg'
+heroImage: '/assets/covers/OMI.webp'
 description: 'A review about OMI'
 icon: 🍱
 rating: A

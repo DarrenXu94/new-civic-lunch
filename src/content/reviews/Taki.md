@@ -1,7 +1,7 @@
 ---
 title: 'Taki'
 pubDate: 'Feb 15, 2023'
-heroImage: '/assets/covers/Taki.jpeg'
+heroImage: '/assets/covers/Taki.webp'
 description: 'A review about Taki'
 icon: 🍣
 rating: B

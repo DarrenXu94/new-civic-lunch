@@ -1,7 +1,7 @@
 ---
 title: 'Cafe 54'
 pubDate: 'Aug 27, 2024'
-heroImage: '/assets/covers/Cafe_54.jpeg'
+heroImage: '/assets/covers/Cafe_54.webp'
 description: 'A review about Cafe 54'
 icon: ☕
 rating: B

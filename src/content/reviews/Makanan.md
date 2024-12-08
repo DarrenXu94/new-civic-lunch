@@ -1,7 +1,7 @@
 ---
 title: 'Makanan'
 pubDate: 'Sep 23, 2024'
-heroImage: '/assets/covers/Makanan.jpeg'
+heroImage: '/assets/covers/Makanan.webp'
 description: 'A review about Makanan'
 icon: 🐔
 rating: B

@@ -1,7 +1,7 @@
 ---
 title: 'Psychedeli'
 pubDate: 'Jul 9, 2024'
-heroImage: '/assets/covers/Psychedeli.jpeg'
+heroImage: '/assets/covers/Psychedeli.webp'
 description: 'A review about Psychedeli'
 icon: 🍄
 rating: B

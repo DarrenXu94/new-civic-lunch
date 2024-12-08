@@ -1,7 +1,7 @@
 ---
 title: 'iPho'
 pubDate: 'Mar 14, 2023'
-heroImage: '/assets/covers/iPho.jpeg'
+heroImage: '/assets/covers/iPho.webp'
 description: 'A review about iPho'
 icon: 🇻🇳
 rating: B

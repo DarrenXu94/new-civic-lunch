@@ -1,7 +1,7 @@
 ---
 title: 'Biang Biang'
 pubDate: 'Mar 6, 2023'
-heroImage: '/assets/covers/Biang_Biang.jpeg'
+heroImage: '/assets/covers/Biang_Biang.webp'
 description: 'A review about Biang Biang'
 icon: 🌶️
 rating: A

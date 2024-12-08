@@ -1,15 +1,14 @@
 // const fs = require("fs");
 import axios from "axios";
 import fs from "fs";
-import sharp from "sharp";
 import NotionApiService from "./notionApiService.js";
 import downloadImage from "./downloadImage.js";
 import urlExtension from "./urlExtension.js";
 import createFolderIfNotExists from "./createFolderIfNotExists.js";
 
-const isLocalHost = process.env.NODE_ENV !== "production";
+import convertToWebp from "./convertToWebp.js";
 
-console.log(process.env.NODE_ENV);
+const isLocalHost = process.env.NODE_ENV !== "production";
 
 const notionApiService = new NotionApiService(isLocalHost);
 
@@ -27,7 +26,7 @@ const createMarkdown = (
 ) => `---
 title: '${cleanName(title)}'
 pubDate: '${pubDate}'
-heroImage: '/assets/covers/${cleanName(title).replaceAll(" ", "_")}.jpeg'
+heroImage: '/assets/covers/${cleanName(title).replaceAll(" ", "_")}.webp'
 description: 'A review about ${cleanName(title)}'
 icon: ${icon}
 rating: ${rating}
@@ -85,17 +84,12 @@ const main = async (newOnly) => {
           url: cover,
           responseType: "arraybuffer",
         }).then(async function (response) {
-          const resizedImagePath = `../public/assets/covers/${titleNoSpace}.jpeg`;
+          const resizedImagePath = `../public/assets/covers/${titleNoSpace}.webp`;
           if (response.headers["content-type"] === "image/jpeg") {
             try {
               // Resize the image while maintaining aspect ratio using sharp library
-              const resizedBuffer = await sharp(Buffer.from(response.data))
-                .rotate()
-                .resize(800, null) // Specify the desired width (300 in this case), height will be adjusted to maintain aspect ratio
-                .toBuffer();
 
-              // Save the resized image
-              fs.writeFileSync(resizedImagePath, resizedBuffer);
+              convertToWebp(Buffer.from(response.data), resizedImagePath);
             } catch (err) {
               console.error("Error resizing and saving image:", err);
             }

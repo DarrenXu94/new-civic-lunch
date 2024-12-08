@@ -1,7 +1,7 @@
 ---
 title: 'Blu ginger'
 pubDate: 'Dec 8, 2023'
-heroImage: '/assets/covers/Blu_ginger.jpeg'
+heroImage: '/assets/covers/Blu_ginger.webp'
 description: 'A review about Blu ginger'
 icon: 🍛
 rating: A

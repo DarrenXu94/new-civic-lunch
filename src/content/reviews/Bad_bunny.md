@@ -1,7 +1,7 @@
 ---
 title: 'Bad bunny'
 pubDate: 'Jan 8, 2024'
-heroImage: '/assets/covers/Bad_bunny.jpeg'
+heroImage: '/assets/covers/Bad_bunny.webp'
 description: 'A review about Bad bunny'
 icon: 🐰
 rating: B

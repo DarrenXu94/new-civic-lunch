@@ -1,7 +1,7 @@
 ---
 title: 'The Corner Market at City West'
 pubDate: 'Aug 13, 2024'
-heroImage: '/assets/covers/The_Corner_Market_at_City_West.jpeg'
+heroImage: '/assets/covers/The_Corner_Market_at_City_West.webp'
 description: 'A review about The Corner Market at City West'
 icon: 🛒
 rating: B

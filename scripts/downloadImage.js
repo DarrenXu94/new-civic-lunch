@@ -1,5 +1,6 @@
 const axios = require("axios");
 const fs = require("fs");
+const convertToWebp = require("./convertToWebp.js");
 
 /**
  * Function to download an image from a URL or base64 data URL
@@ -13,12 +14,16 @@ async function downloadImage(url, outputPath) {
       // Handle base64 data URL
       const base64Data = url.split(",")[1];
       const buffer = Buffer.from(base64Data, "base64");
-      fs.writeFileSync(outputPath, buffer);
+      // fs.writeFileSync(outputPath, buffer);
+      convertToWebp(buffer, outputPath);
+
       console.log("Image downloaded and saved as:", outputPath);
     } else {
       // Handle regular URL
       const response = await axios.get(url, { responseType: "arraybuffer" });
-      fs.writeFileSync(outputPath, response.data);
+      // fs.writeFileSync(outputPath, response.data);
+      convertToWebp(response.data, outputPath);
+
       console.log("Image downloaded and saved as:", outputPath);
     }
   } catch (error) {

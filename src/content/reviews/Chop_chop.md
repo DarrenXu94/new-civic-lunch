@@ -1,7 +1,7 @@
 ---
 title: 'Chop chop'
 pubDate: 'Oct 23, 2024'
-heroImage: '/assets/covers/Chop_chop.jpeg'
+heroImage: '/assets/covers/Chop_chop.webp'
 description: 'A review about Chop chop'
 icon: 🪓
 rating: C

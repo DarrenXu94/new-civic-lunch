@@ -1,7 +1,7 @@
 ---
 title: 'Raku'
 pubDate: 'Dec 15, 2023'
-heroImage: '/assets/covers/Raku.jpeg'
+heroImage: '/assets/covers/Raku.webp'
 description: 'A review about Raku'
 icon: 🇯🇵
 rating: A

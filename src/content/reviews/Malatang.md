@@ -1,7 +1,7 @@
 ---
 title: 'Malatang'
 pubDate: 'Mar 1, 2023'
-heroImage: '/assets/covers/Malatang.jpeg'
+heroImage: '/assets/covers/Malatang.webp'
 description: 'A review about Malatang'
 icon: 🌶️
 rating: S

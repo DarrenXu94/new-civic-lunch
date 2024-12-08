@@ -1,7 +1,7 @@
 ---
 title: 'Terra'
 pubDate: 'Feb 28, 2023'
-heroImage: '/assets/covers/Terra.jpeg'
+heroImage: '/assets/covers/Terra.webp'
 description: 'A review about Terra'
 icon: 🍗
 rating: S

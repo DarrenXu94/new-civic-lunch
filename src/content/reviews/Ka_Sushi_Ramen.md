@@ -1,7 +1,7 @@
 ---
 title: 'Ka Sushi Ramen'
 pubDate: 'Sep 16, 2024'
-heroImage: '/assets/covers/Ka_Sushi_Ramen.jpeg'
+heroImage: '/assets/covers/Ka_Sushi_Ramen.webp'
 description: 'A review about Ka Sushi Ramen'
 icon: 🍥
 rating: B

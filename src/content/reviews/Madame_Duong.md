@@ -1,7 +1,7 @@
 ---
 title: 'Madame Duong'
 pubDate: 'Aug 28, 2024'
-heroImage: '/assets/covers/Madame_Duong.jpeg'
+heroImage: '/assets/covers/Madame_Duong.webp'
 description: 'A review about Madame Duong'
 icon: 🍜
 rating: A

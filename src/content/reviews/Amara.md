@@ -1,7 +1,7 @@
 ---
 title: 'Amara'
 pubDate: 'Sep 9, 2024'
-heroImage: '/assets/covers/Amara.jpeg'
+heroImage: '/assets/covers/Amara.webp'
 description: 'A review about Amara'
 icon: 🍛
 rating: S

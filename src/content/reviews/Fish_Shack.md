@@ -1,7 +1,7 @@
 ---
 title: 'Fish Shack'
 pubDate: 'Mar 28, 2023'
-heroImage: '/assets/covers/Fish_Shack.jpeg'
+heroImage: '/assets/covers/Fish_Shack.webp'
 description: 'A review about Fish Shack'
 icon: 🎣
 rating: A

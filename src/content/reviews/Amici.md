@@ -1,7 +1,7 @@
 ---
 title: 'Amici'
 pubDate: 'Oct 17, 2024'
-heroImage: '/assets/covers/Amici.jpeg'
+heroImage: '/assets/covers/Amici.webp'
 description: 'A review about Amici'
 icon: 🥪
 rating: A

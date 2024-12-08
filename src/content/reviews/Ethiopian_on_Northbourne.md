@@ -1,7 +1,7 @@
 ---
 title: 'Ethiopian on Northbourne'
 pubDate: 'Oct 29, 2024'
-heroImage: '/assets/covers/Ethiopian_on_Northbourne.jpeg'
+heroImage: '/assets/covers/Ethiopian_on_Northbourne.webp'
 description: 'A review about Ethiopian on Northbourne'
 icon: 🇪🇹
 rating: B

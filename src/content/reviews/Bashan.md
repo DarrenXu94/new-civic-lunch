@@ -1,7 +1,7 @@
 ---
 title: 'Bashan'
 pubDate: 'Jul 11, 2024'
-heroImage: '/assets/covers/Bashan.jpeg'
+heroImage: '/assets/covers/Bashan.webp'
 description: 'A review about Bashan'
 icon: 🍜
 rating: A

@@ -1,7 +1,7 @@
 ---
 title: 'Fonda'
 pubDate: 'Aug 18, 2023'
-heroImage: '/assets/covers/Fonda.jpeg'
+heroImage: '/assets/covers/Fonda.webp'
 description: 'A review about Fonda'
 icon: 🌮
 rating: B

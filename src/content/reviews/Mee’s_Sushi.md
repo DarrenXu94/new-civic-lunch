@@ -1,7 +1,7 @@
 ---
 title: 'Mee’s Sushi'
 pubDate: 'Aug 21, 2024'
-heroImage: '/assets/covers/Mee’s_Sushi.jpeg'
+heroImage: '/assets/covers/Mee’s_Sushi.webp'
 description: 'A review about Mee’s Sushi'
 icon: 🎣
 rating: C

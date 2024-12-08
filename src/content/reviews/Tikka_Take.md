@@ -1,7 +1,7 @@
 ---
 title: 'Tikka Take'
 pubDate: 'Mar 15, 2023'
-heroImage: '/assets/covers/Tikka_Take.jpeg'
+heroImage: '/assets/covers/Tikka_Take.webp'
 description: 'A review about Tikka Take'
 icon: 🍛
 rating: B

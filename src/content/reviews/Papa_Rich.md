@@ -1,7 +1,7 @@
 ---
 title: 'Papa Rich'
 pubDate: 'Apr 3, 2023'
-heroImage: '/assets/covers/Papa_Rich.jpeg'
+heroImage: '/assets/covers/Papa_Rich.webp'
 description: 'A review about Papa Rich'
 icon: 🥢
 rating: A

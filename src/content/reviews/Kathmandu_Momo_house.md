@@ -1,7 +1,7 @@
 ---
 title: 'Kathmandu Momo house'
 pubDate: 'Sep 26, 2024'
-heroImage: '/assets/covers/Kathmandu_Momo_house.jpeg'
+heroImage: '/assets/covers/Kathmandu_Momo_house.webp'
 description: 'A review about Kathmandu Momo house'
 icon: 🇳🇵
 rating: B

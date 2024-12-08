@@ -1,7 +1,7 @@
 ---
 title: '&Sando'
 pubDate: 'Apr 17, 2024'
-heroImage: '/assets/covers/&Sando.jpeg'
+heroImage: '/assets/covers/&Sando.webp'
 description: 'A review about &Sando'
 icon: 🍖
 rating: C

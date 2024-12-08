@@ -1,7 +1,7 @@
 ---
 title: 'Sandoochie'
 pubDate: 'Mar 21, 2023'
-heroImage: '/assets/covers/Sandoochie.jpeg'
+heroImage: '/assets/covers/Sandoochie.webp'
 description: 'A review about Sandoochie'
 icon: 🥪
 rating: B

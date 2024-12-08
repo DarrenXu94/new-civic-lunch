@@ -1,7 +1,7 @@
 ---
 title: 'Yumko'
 pubDate: 'Jul 7, 2024'
-heroImage: '/assets/covers/Yumko.jpeg'
+heroImage: '/assets/covers/Yumko.webp'
 description: 'A review about Yumko'
 icon: 🇰🇷
 rating: C

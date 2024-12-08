@@ -1,7 +1,7 @@
 ---
 title: 'Madam Lu'
 pubDate: 'Oct 5, 2024'
-heroImage: '/assets/covers/Madam_Lu.jpeg'
+heroImage: '/assets/covers/Madam_Lu.webp'
 description: 'A review about Madam Lu'
 icon: 👵
 rating: B

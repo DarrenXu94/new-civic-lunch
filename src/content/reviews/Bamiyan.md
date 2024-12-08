@@ -1,7 +1,7 @@
 ---
 title: 'Bamiyan'
 pubDate: 'Apr 17, 2023'
-heroImage: '/assets/covers/Bamiyan.jpeg'
+heroImage: '/assets/covers/Bamiyan.webp'
 description: 'A review about Bamiyan'
 icon: 🥘
 rating: A
