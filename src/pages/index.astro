@@ -2,7 +2,7 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { SITE_TITLE, SITE_DESCRIPTION, RATING_ARRAY } from "../consts";
 import { getCollection } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
 
@@ -19,6 +19,8 @@ const alphabeticalPosts = (await getCollection("reviews")).sort((a, b) => {
   }
   return 0;
 });
+
+const uniqueTags = [...RATING_ARRAY];
 ---
 
 <script>
@@ -98,6 +100,32 @@ const alphabeticalPosts = (await getCollection("reviews")).sort((a, b) => {
       ul a:hover img {
         box-shadow: var(--box-shadow);
       }
+
+      .pill-btn {
+        background-color: var(--accent);
+        color: #fff;
+        border: none;
+        border-radius: 999px;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        transition: 0.2s ease;
+      }
+
+      .pill-btn.all {
+        background-color: #000;
+      }
+
+      .pill-btn.active {
+        transform: scale(1.3);
+      }
+
+      .btn-group {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+      }
+
       @media (max-width: 720px) {
         ul {
           gap: 0.5em;
@@ -145,11 +173,27 @@ const alphabeticalPosts = (await getCollection("reviews")).sort((a, b) => {
         </ul>
         <hr />
 
-        <h2>All reviews</h2>
-        <ul>
+        <h2>All reviews ({alphabeticalPosts.length})</h2>
+
+        <details>
+          <summary>Filters</summary>
+
+          <div id="filter-buttons" class="btn-group">
+            <button class="pill-btn all" data-filter="all">Clear</button>
+            {
+              uniqueTags.map((tag) => (
+                <button class="pill-btn" data-filter={tag}>
+                  {tag} Tier
+                </button>
+              ))
+            }
+          </div>
+        </details>
+
+        <ul id="posts-list">
           {
             alphabeticalPosts.map((post) => (
-              <li>
+              <li data-title={post.data.title} data-rating={post.data.rating}>
                 <a href={`/blog/${post.slug}/`}>
                   <img
                     width={720}
@@ -173,3 +217,35 @@ const alphabeticalPosts = (await getCollection("reviews")).sort((a, b) => {
     <Footer />
   </body>
 </html>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll("#filter-buttons button");
+    const posts = document.querySelectorAll(
+      "#posts-list li"
+    ) as unknown as HTMLElement[];
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const filter = button.getAttribute("data-filter");
+
+        buttons.forEach((button) => {
+          button.classList.remove("active");
+        });
+
+        if (filter !== "all") {
+          button.classList.add("active");
+        }
+
+        posts.forEach((post) => {
+          const tags = post.getAttribute("data-rating");
+          if (!tags) return;
+          if (filter === "all" || tags === filter) {
+            post.style.display = "";
+          } else {
+            post.style.display = "none";
+          }
+        });
+      });
+    });
+  });
+</script>
