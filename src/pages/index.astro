@@ -70,7 +70,7 @@ const uniqueTags = [...RATING_ARRAY];
         margin-bottom: 1rem;
         text-align: center;
       }
-      ul li:nth-child(3n-2) img {
+      ul li img {
         width: 100%;
       }
       ul li:nth-child(3n-2) .title {
@@ -124,6 +124,10 @@ const uniqueTags = [...RATING_ARRAY];
         gap: 1rem;
         margin-bottom: 1rem;
         flex-wrap: wrap;
+      }
+
+      .hidden {
+        display: none;
       }
 
       @media (max-width: 720px) {
@@ -240,12 +244,42 @@ const uniqueTags = [...RATING_ARRAY];
           const tags = post.getAttribute("data-rating");
           if (!tags) return;
           if (filter === "all" || tags === filter) {
-            post.style.display = "";
+            // post.style.display = "";
+            post.classList.remove("hidden");
           } else {
-            post.style.display = "none";
+            // post.style.display = "none";
+            post.classList.add("hidden");
           }
         });
+
+        updateLayout();
       });
     });
+
+    const listItems = document.querySelectorAll(
+      "ul li"
+    ) as unknown as HTMLElement[];
+
+    /**
+     * Update the layout of the list items based on the number of visible items
+     */
+    function updateLayout() {
+      let visibleCount = 0;
+
+      listItems.forEach((item) => {
+        if (!item.classList.contains("hidden")) {
+          visibleCount++;
+          if (visibleCount % 3 === 1) {
+            item.style.width = "100%";
+            item.style.marginBottom = "1rem";
+            item.style.textAlign = "center";
+          } else {
+            item.style.width = "calc(50% - 1rem)";
+            item.style.marginBottom = "0";
+            item.style.textAlign = "left";
+          }
+        }
+      });
+    }
   });
 </script>
