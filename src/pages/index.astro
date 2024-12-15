@@ -264,6 +264,8 @@ const uniqueTags = [...RATING_ARRAY];
      * Update the layout of the list items based on the number of visible items
      */
     function updateLayout() {
+      if (window.innerWidth < 720) return;
+
       let visibleCount = 0;
 
       listItems.forEach((item) => {
