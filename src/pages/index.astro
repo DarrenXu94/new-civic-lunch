@@ -145,6 +145,13 @@ const uniqueTags = [...RATING_ARRAY];
           font-size: 1.563em;
         }
       }
+
+      .responsive-image {
+        max-height: 360px;
+        @media (max-width: 720px) {
+          max-height: 180px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -158,11 +165,11 @@ const uniqueTags = [...RATING_ARRAY];
               <li>
                 <a href={`/blog/${post.slug}/`}>
                   <img
-                    width={720}
-                    height={360}
+                    class="responsive-image"
                     src={post.data.heroImage}
                     alt=""
                   />
+
                   <h4 class="title">
                     {post.data.title} {post.data.graveyard && "🪦 (Closed) "}
                   </h4>
@@ -204,6 +211,7 @@ const uniqueTags = [...RATING_ARRAY];
                     height={360}
                     src={post.data.heroImage}
                     alt=""
+                    class="responsive-image"
                   />
                   <h4 class="title">
                     {post.data.title} {post.data.graveyard && "🪦 (Closed) "}
